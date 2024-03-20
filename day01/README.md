@@ -2,9 +2,9 @@
 
 - Hoàn thành giao diện theo ảnh 
 
-- [BT1](https://buiduong2.github.io/F8-offline/buoi1/ex1.html) 
-- [BT2](https://buiduong2.github.io/F8-offline/buoi1/ex2.html)
-- [BT3](https://buiduong2.github.io/F8-offline/buoi1/ex3.html)
+- [BT1](https://buiduong2.github.io/F8-offline/day01/ex1.html) 
+- [BT2](https://buiduong2.github.io/F8-offline/day01/ex2.html)
+- [BT3](https://buiduong2.github.io/F8-offline/day01/ex3.html)
 
 - Chữa BT Về nhà: 
   - Mặc dù là BT về nhà nhìn các chữ có vẻ vô nghĩa nhưng ta vẫn nên coi trọng và làm hẳn hoi VD `<title>` thì phải suy nghĩ
