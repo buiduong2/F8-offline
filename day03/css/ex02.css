@@ -14,10 +14,14 @@
 }
 
 .testimonial-item {
-    width: 33.33%;
+    width: 30%;
     display: flex;
 }
 
 .testimonial-detail {
-    margin-top: 0;
+    margin-left: 10px;
+}
+
+.testimonial-text {
+    margin: 0;
 }
