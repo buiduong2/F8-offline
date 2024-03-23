@@ -1,0 +1,24 @@
+#access-manager {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.form-field {
+    display: flex;
+    margin: 10px 0;
+}
+
+.form-label {
+    width: 30%;
+}
+
+.form-radio-group,
+.form-checkbox-group {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-button-group {
+    text-align: center;
+}

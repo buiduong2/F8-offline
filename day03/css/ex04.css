@@ -1,0 +1,26 @@
+.section {
+    margin: 10px 100px;
+}
+
+.tab {
+    display: flex;
+}
+
+.tab-item {
+    width: 10%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.section-header {
+    padding: 50px;
+}
+
+.section-body {
+    display: flex;
+}
+
+.location-detail {
+    padding: 30px;
+    background-color: bisque;
+}

@@ -1,0 +1,23 @@
+.section {
+    margin: 10px 100px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.testimonial-item {
+    width: 33.33%;
+    display: flex;
+}
+
+.testimonial-detail {
+    margin-top: 0;
+}

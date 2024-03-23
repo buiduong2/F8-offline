@@ -1,0 +1,30 @@
+.section {
+    margin: 10px 100px;
+}
+
+.section-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info {
+    width: 33%;
+}
+
+.contact-form {
+    width: 64%;
+}
+
+.contact-info-item a {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info-icon {
+    margin-right: 20px;
+}
+
+.form-field {
+    margin-bottom: 10px;
+}
+
