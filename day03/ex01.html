@@ -20,7 +20,8 @@
         </header>
 
         <div class="section-body">
-            <aside class="contact-info">
+            <!-- Nên sử udngj Article. Aside là một cái ji đấy bao trùm tất cả các phần tử bên ngoài -->
+            <article class="contact-info">
                 <h3 class="contact-body-title">Contact Info</h3>
                 <ul class="contact-info-list">
                     <li class="contact-info-item">
@@ -50,7 +51,7 @@
                         </a>
                     </li>
                 </ul>
-            </aside>
+            </article>
 
             <article class="contact-form">
                 <h3 class="contact-body-title">Having Any Query! Or Book an appointment</h3>
@@ -68,10 +69,11 @@
                             class="contact-form-input">
                     </div>
                     <div class="form-field">
+                        <!-- Message -->
                         <textarea class="form-input" name="message" cols="30" rows="10" id="message"
-                            class="contact-form-input">Message</textarea>
+                            class="contact-form-input" placeholder="Message"></textarea>
                     </div>
-                    <button class="form-button" id="contact-form-button">Send Message</button>
+                    <button class="form-button" id="contact-form-button" >Send Message</button>
                 </form>
             </article>
         </div>
