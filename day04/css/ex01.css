@@ -1,0 +1,37 @@
+#form-subscribe {
+    background-color: #334455;
+    color: #FFFEFE;
+    padding: 40px;
+}
+
+#form-subscribe:hover .form-input {
+    background-color: #ddd;
+}
+
+#form-subscribe:hover .form-btn {
+    background-color: #FFA504;
+    color: #fff;
+}
+
+#form-subscribe:hover .form-input::placeholder,
+.highlighted {
+    color: #FFA504;
+}
+
+.form-btn,
+.form-input {
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.form-input {
+    padding-left: 10px;
+}
+
+.form-btn {
+    background-color: #F8DB35;
+    color: black;
+    padding: 0 20px;
+
+}

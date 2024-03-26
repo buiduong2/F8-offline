@@ -1,0 +1,64 @@
+.section {
+    color: #3A2617;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.section-title {
+    font-weight: 400;
+
+}
+
+.form-title {
+    font-weight: 900;
+    font-size: 80px;
+}
+
+.section-title,
+.form-input {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.form-title,
+.form-btn {
+    font-family: "Alfa Slab One", sans-serif;
+}
+
+
+.form-btn {
+    background-color: #B0322B;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-weight: 200;
+    font-weight: 800;
+
+}
+
+.form-input {
+    padding: 0 40px;
+    color: inherit;
+    border: 1px solid #CACACA;
+}
+
+.form-input::placeholder {
+    color: currentColor;
+}
+
+.form-input,
+.form-btn {
+    box-sizing: border-box;
+    height: 80px;
+    width: 100%;
+    font-size: 30px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 15px 15px;
+}
