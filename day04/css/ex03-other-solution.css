@@ -1,0 +1,139 @@
+#best-seller {
+    text-align: center;
+    font-size: 25px;
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.tab-list {
+    text-align: center;
+}
+
+
+
+table.tab-list td {
+    border: 1px solid;
+}
+
+.product-list td,
+table.tab-list td {
+    width: 20%;
+}
+
+
+
+.rating .star-yellow {
+    color: yellow;
+}
+
+.rating .star-grey {
+    color: grey;
+}
+
+.product-title {
+    color: #797979;
+}
+
+/* Hover Img */
+
+.btn-main,
+.btn-sub {
+    color: transparent;
+    background-color: transparent;
+}
+
+.product-img-warpper:hover .btn-main,
+.product-img-warpper:hover .btn-sub {
+    background-color: #29388E;
+    color: white;
+}
+
+/* Change Tabs Actions */
+#input-1:checked~.tab-list #tab-1,
+#input-2:checked~.tab-list #tab-2,
+#input-3:checked~.tab-list #tab-3,
+#input-4:checked~.tab-list #tab-4,
+#input-5:checked~.tab-list #tab-5 {
+    background-color: #29388E;
+    color: white;
+}
+
+/* Tab1 */
+#input-1:checked~.product-list .product-img-warpper {
+    background-image: url("../img/ex03/product-1-main.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#input-1:checked~.product-list .product-img-warpper:hover {
+    background-image: url("../img/ex03/product-1-sub.webp");
+}
+
+#input-1:checked~.product-list .product-title::before {
+    content: "Tinh Chất Dưỡng Sáng Da";
+}
+
+#input-1:checked~.product-list .product-price::before {
+    content: "1.050.000đ";
+}
+
+/* Tab2 */
+
+#input-2:checked~.product-list .product-img-warpper {
+    background-image: url("../img/ex03/product-2-main.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#input-2:checked~.product-list .product-img-warpper:hover {
+    background-image: url("../img/ex03/product-2-sub.webp");
+}
+
+#input-2:checked~.product-list .product-title::before {
+    content: "Tinh Chất Tóc HairCare";
+}
+
+#input-2:checked~.product-list .product-price::before {
+    content: "500.000đ";
+}
+
+
+/* Tab3 */
+#input-3:checked~.product-list .product-img-warpper {
+    background-image: url("../img/ex03/product-3-main.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#input-3:checked~.product-list .product-img-warpper:hover {
+    background-image: url("../img/ex03/product-3-sub.webp");
+}
+
+#input-3:checked~.product-list .product-title::before {
+    content: "Tinh Chất Cosmetic";
+}
+
+#input-3:checked~.product-list .product-price::before {
+    content: "700.000đ";
+}
+
+/* Tab-4 */
+#input-4:checked~.product-list .product-img-warpper {
+    background-image: url("../img/ex03/product-4-main.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#input-4:checked~.product-list .product-img-warpper:hover {
+    background-image: url("../img/ex03/product-4-sub.webp");
+}
+
+#input-4:checked~.product-list .product-title::before {
+    content: "Tinh Chất Cosmetic";
+}
+
+#input-4:checked~.product-list .product-price::before {
+    content: "700.000đ";
+}
+
+/* And So on */
