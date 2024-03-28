@@ -39,7 +39,6 @@ table.tab-list td {
 .btn-main,
 .btn-sub {
     color: transparent;
-    background-color: transparent;
 }
 
 .product-img-warpper:hover .btn-main,
@@ -59,15 +58,21 @@ table.tab-list td {
 }
 
 /* Tab1 */
-#input-1:checked~.product-list .product-img-warpper {
-    background-image: url("../img/ex03/product-1-main.webp");
+.product-img-warpper {
     background-repeat: no-repeat;
     background-size: cover;
+    aspect-ratio: 1/1;
+    background-position: right;
 }
 
-#input-1:checked~.product-list .product-img-warpper:hover {
-    background-image: url("../img/ex03/product-1-sub.webp");
+.product-img-warpper:hover {
+    background-position: left;
 }
+
+#input-1:checked~.product-list .product-img-warpper {
+    background-image: url("../img/ex03/product-1.png");
+}
+
 
 #input-1:checked~.product-list .product-title::before {
     content: "Tinh Chất Dưỡng Sáng Da";
@@ -80,13 +85,7 @@ table.tab-list td {
 /* Tab2 */
 
 #input-2:checked~.product-list .product-img-warpper {
-    background-image: url("../img/ex03/product-2-main.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#input-2:checked~.product-list .product-img-warpper:hover {
-    background-image: url("../img/ex03/product-2-sub.webp");
+    background-image: url("../img/ex03/product-2.png");
 }
 
 #input-2:checked~.product-list .product-title::before {
@@ -100,14 +99,9 @@ table.tab-list td {
 
 /* Tab3 */
 #input-3:checked~.product-list .product-img-warpper {
-    background-image: url("../img/ex03/product-3-main.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("../img/ex03/product-3.png");
 }
 
-#input-3:checked~.product-list .product-img-warpper:hover {
-    background-image: url("../img/ex03/product-3-sub.webp");
-}
 
 #input-3:checked~.product-list .product-title::before {
     content: "Tinh Chất Cosmetic";
@@ -119,13 +113,7 @@ table.tab-list td {
 
 /* Tab-4 */
 #input-4:checked~.product-list .product-img-warpper {
-    background-image: url("../img/ex03/product-4-main.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#input-4:checked~.product-list .product-img-warpper:hover {
-    background-image: url("../img/ex03/product-4-sub.webp");
+    background-image: url("../img/ex03/product-4.png");
 }
 
 #input-4:checked~.product-list .product-title::before {
@@ -135,5 +123,3 @@ table.tab-list td {
 #input-4:checked~.product-list .product-price::before {
     content: "700.000đ";
 }
-
-/* And So on */
