@@ -1,0 +1,66 @@
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+}
+
+.section-courses {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.4rem;
+}
+
+.section-desction {
+    font-size: 1.6rem;
+}
+
+.course-list {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+.course-item {
+    text-align: center;
+    width: 15%;
+    margin: 15px;
+    padding: 30px 30px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.course-icon {
+    color: #F2A93A;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+
+}
+
+
+.course-title {
+    font-size: 2.0rem;
+}
+
+.course-desction {
+    color: #ccc;
+}
+
+.course-btn {
+    padding: 10px 19px;
+    background-color: #F2A93A;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+.course-btn:hover {
+    background-color: #f2a83ad3;
+}

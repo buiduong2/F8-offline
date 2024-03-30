@@ -1,0 +1,58 @@
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+}
+
+.faq-section {
+    padding-top: 50px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.question {
+    display: flex;
+    background-color: #D85824;
+    margin-bottom: 5px;
+    color: white;
+    padding: 10px 20px;
+}
+
+.question-toggle-icon {
+    color: inherit;
+    border: none;
+    background-color: transparent;
+}
+
+.question-toggle-icon label::after {
+    content: '\2b';
+    font-family: 'FontAwesome';
+    display: block;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.answer {
+    padding-left: 20px;
+}
+
+.answer p,
+.answer ol {
+    margin: 0;
+}
+
+
+/* drop Answer */
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height linear 0.5s;
+}
+
+.toggle-answer-checkbox:checked~.question .question-toggle-icon label::after {
+    content: '\f068';
+}
+
+.toggle-answer-checkbox:checked~.answer {
+    max-height: 500px;
+}
