@@ -11,5 +11,6 @@
 
 
 - Chữa bài : 
+  - Bài 1 sử dụng background image cho box content chứ ko pải chỉ có background rgba (bởi vì ta có thể thấy React nó lệch so với jS)
   - Các thể loại gạch chân và mang tên một trang web ta nên dùng thẻ a để nó link tới tương ứng
   - Bài 2: bỏ cmn animation vì nó bị delay rất khó chịu

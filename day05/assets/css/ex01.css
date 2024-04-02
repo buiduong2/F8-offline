@@ -19,6 +19,11 @@ body {
 }
 
 .content {
+    background: rgba(255, 255, 255, 0.7) url('../img/maxresdefault.jpg');
+    background-position: 60% 33%;
+    background-size: calc(1280/500 * 110%);
+    filter: blur(1px);
+
     position: absolute;
     top: 16%;
     left: 38%;
@@ -26,7 +31,6 @@ body {
     box-shadow: -2px 5px 10px 5px rgba(0, 0, 0, 0.5);
     width: 500px;
     height: 300px;
-    background-color: rgba(255, 255, 255, 0.7);
     text-align: center;
 }
 
@@ -41,4 +45,5 @@ body {
 
 .content-source .website-name {
     text-decoration: underline;
+    color: inherit;
 }
