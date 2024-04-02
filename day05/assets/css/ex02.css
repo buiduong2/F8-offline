@@ -15,6 +15,7 @@ html {
     margin-bottom: 5px;
     color: white;
     padding: 10px 20px;
+    cursor: pointer;
 }
 
 .question-toggle-icon {
@@ -23,7 +24,7 @@ html {
     background-color: transparent;
 }
 
-.question-toggle-icon label::after {
+.question-toggle-icon::after {
     content: '\2b';
     font-family: 'FontAwesome';
     display: block;
@@ -43,10 +44,12 @@ html {
 
 /* drop Answer */
 
+.question:hover {
+    opacity: 0.9;
+}
+
 .answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height linear 0.5s;
+    display: none;
 }
 
 .toggle-answer-checkbox:checked~.question .question-toggle-icon label::after {
@@ -54,5 +57,5 @@ html {
 }
 
 .toggle-answer-checkbox:checked~.answer {
-    max-height: 500px;
+    display: block;
 }

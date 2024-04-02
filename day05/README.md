@@ -8,3 +8,8 @@
 | [Bài 1](https://buiduong2.github.io/F8-offline/day05/ex01.html) | Sử dụng background CSS như hình vẽ                      |
 | [Bài 2](https://buiduong2.github.io/F8-offline/day05/ex02.html) | Code theo giao diện thêm chức năng cuộn xuống khi click |
 | [Bài 3](https://buiduong2.github.io/F8-offline/day05/ex03.html) | Code theo giao diện                                     |
+
+
+- Chữa bài : 
+  - Các thể loại gạch chân và mang tên một trang web ta nên dùng thẻ a để nó link tới tương ứng
+  - Bài 2: bỏ cmn animation vì nó bị delay rất khó chịu
