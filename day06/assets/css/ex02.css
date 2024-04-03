@@ -1,0 +1,121 @@
+/* TOdo Them max line và break line cho Service-desction */
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+}
+
+body {
+    background-color: #ebf5fe;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section-service {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -15px;
+}
+
+.col {
+    width: 33%;
+    padding: 15px;
+}
+
+.service-item {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    z-index: 222;
+}
+
+.service-item>a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.service-item:hover::after {
+    border-radius: 10px;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    border: 3px solid red;
+}
+
+.serivce-header {
+    display: flex;
+    font-size: 2.0rem;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.service-icon {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: white;
+}
+
+.icon-bg-red {
+    background: linear-gradient(to left, #e7a496, #E55B7B);
+}
+
+.icon-bg-light-green {
+    background: linear-gradient(to left, #7AD7A0, #4FA5A4);
+}
+
+.icon-bg-yellow {
+    background: linear-gradient(to left, #F4C049, #E18733);
+}
+
+.icon-bg-blue {
+    background: linear-gradient(to left, #6D90F3, #2F6ACD);
+}
+
+.icon-bg-purple {
+    background: linear-gradient(to left, #B85BEA, #7023CB);
+}
+
+.icon-bg-green {
+    background: linear-gradient(to left, #8FC052, #6B8B2E);
+}
+
+.service-desction {
+    color: #666666;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+
+a.service-link {
+    color: #6D90F3;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
