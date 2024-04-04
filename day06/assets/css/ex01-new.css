@@ -1,0 +1,207 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+}
+
+body {
+    background-color: #ebf5fe;
+}
+
+.section {
+    width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    color: #BCBCBC;
+    padding: 40px;
+}
+
+.section-title {
+    font-family: "Lobster", sans-serif;
+    font-size: 3.0rem;
+    color: #313030;
+    margin-bottom: 30px;
+}
+
+.section-description {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.section-description .text-high-light {
+    color: #F0776F;
+}
+
+.form-field {
+    display: flex;
+    position: relative;
+    flex-direction: row-reverse;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+
+
+.form-input {
+    color: inherit;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    border: 1px solid currentColor;
+}
+
+.form-select {
+    appearance: none;
+}
+
+.form-input::placeholder {
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    color: #BCBCBC;
+}
+
+.form-input:focus {
+    color: black;
+}
+
+.form-input:focus~.form-label {
+    background-color: black;
+}
+
+.form-input:focus~.form-input-tooltip {
+    display: block;
+}
+
+.form-input:focus~.input-icon {
+    color: black;
+    cursor: pointer;
+}
+
+
+.input-icon,
+.form-input-tooltip,
+.form-input,
+.form-label {
+    padding: 15px 18px;
+}
+
+.form-label {
+    font-size: 2.0rem;
+    color: white;
+    background-color: #BCBCBC;
+}
+
+.input-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    font-family: "fontawesome";
+}
+
+.input-icon-textarea {
+    bottom: auto;
+    padding-top: 16px;
+}
+
+.form-input:not(:focus)~.input-icon .icon-required::after {
+    content: "\f005";
+    display: block;
+}
+
+.form-input:focus~.input-icon .icon-cancel::after {
+    content: "\58";
+}
+
+.icon-select::before {
+    display: block;
+    content: "\f04b";
+    transform: rotate(-90deg);
+}
+
+.icon-select::after {
+    display: block;
+    content: "\f04b";
+    transform: rotate(90deg);
+}
+
+.form-input-tooltip {
+    display: none;
+    color: white;
+    position: absolute;
+    background-color: black;
+    bottom: calc(100% + 20px);
+    left: 5%;
+}
+
+.form-input-tooltip::after {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    content: "";
+    border-top: 10px solid black;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-option label {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.form-checkbox::after {
+    font-size: 1.4rem;
+    text-align: center;
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    border: 3px solid #BCBCBC;
+    cursor: pointer;
+}
+
+.form-checkbox:checked::after {
+    content: "\f00c";
+    font-family: "fontawesome";
+}
+
+.form-checkbox:checked:hover::after {
+    background-color: #BCBCBC;
+    color: white;
+}
+
+.form-btn {
+    padding: 10px 35px;
+    border: none;
+    cursor: pointer;
+    background-color: #EA3F33;
+    color: white;
+
+}

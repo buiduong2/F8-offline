@@ -38,6 +38,8 @@ body {
     border-radius: 10px;
     position: relative;
     z-index: 222;
+    border: 3px solid transparent;
+
 }
 
 .service-item>a {
@@ -46,17 +48,8 @@ body {
 }
 
 
-.service-item:hover::after {
-    border-radius: 10px;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    border: 3px solid red;
+.service-item:hover {
+    border-color: red;
 }
 
 .serivce-header {
@@ -103,10 +96,14 @@ body {
     background: linear-gradient(to left, #8FC052, #6B8B2E);
 }
 
-.service-desction {
+.service-description {
     color: #666666;
     font-size: 1.5rem;
     margin-bottom: 30px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 

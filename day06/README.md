@@ -1,15 +1,10 @@
-## Ex02 
+## Excercise day 06 :
 
-Khi hover sẽ đổi màu border giống như hình Demo
-Có bóng mờ phía sau icon dựa theo background của icon
-Background: #ebf5fe
-Font: Roboto
-Color: #666666
+- Được học về các thuộc tính border, kích thước, căn chỉnh văn bản
 
-## ex03
-
-Ảnh nền: http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg
-Màu nền: #ff574d
-Font: Nunito
-Màu Heading: #272323
-Màu chữ: #717171
+| Bài                                                                       | Mô tả                                                  |
+| :------------------------------------------------------------------------ | :----------------------------------------------------- |
+| [Bài 1 Cũ k chấm](https://buiduong2.github.io/F8-offline/day06/ex01.html) | Code navbar có submenu có chức năng click ẩn hiện menn |
+| [Bài 3 Cũ k chấm](https://buiduong2.github.io/F8-offline/day06/ex03.html) | Code form đăng nhập theo giao diện                     |
+| :------------------------------------------------------------------------ | :----------------------------------------------------- |
+| [Bài 2](https://buiduong2.github.io/F8-offline/day06/ex02.html)           | Code giao diện layout 3 sản phẩm 1 hàng                |
