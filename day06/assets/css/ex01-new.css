@@ -67,10 +67,12 @@ body {
     color: #BCBCBC;
 }
 
+.form-field:hover .form-input,
 .form-input:focus {
     color: black;
 }
 
+.form-field:hover .form-label,
 .form-input:focus~.form-label {
     background-color: black;
 }
@@ -79,6 +81,7 @@ body {
     display: block;
 }
 
+.form-field:hover .input-icon,
 .form-input:focus~.input-icon {
     color: black;
     cursor: pointer;
