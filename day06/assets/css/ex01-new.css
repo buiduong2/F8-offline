@@ -58,6 +58,7 @@ body {
 
 .form-select {
     appearance: none;
+    cursor: pointer;
 }
 
 .form-input::placeholder {
