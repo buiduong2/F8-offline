@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Asap", sans-serif;
+}
+
+@font-face {
+    font-family: "SFU";
+    src: url("../fonts/SFUTheSans/SFUTheSansExtraBoldCaps.TTF");
+}
+
+
+.full-width {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.profile {
+    padding-top: 26.25%;
+    background: aliceblue url("../img/banner-ex02.jpg") no-repeat center/cover;
+    position: relative;
+}
+
+.user-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -30px;
+
+}
+
+.user-avatar {
+    width: 250px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+
+.user-info {
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    padding-left: 25px;
+}
+
+.user-name {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.user-additional-info-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.additional-info-item+.additional-info-item {
+    margin-left: 30px;
+}
+
+.additional-info-item .info-label {
+    font-weight: 300;
+}
+
+.additional-info-item .info-value {
+    font-weight: 500;
+    font-size: 150%;
+}
+
+.nav-list {
+    position: relative;
+    z-index: 100;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-item+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #3f3424;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    padding: 13px 0;
+    border-bottom: 5px solid transparent;
+}
+
+.nav-link:hover {
+    border-color: currentColor;
+    color: #e44135;
+}
