@@ -1,16 +1,10 @@
-## 
+## ## Exercises day07
 
-Font chữ: Asap
-Mã màu tiêu đề: #bf4240
-Màu chữ: #3f3424
-Font chữ giá: SFU
-Ảnh banner: https://cdn.houseviet.vn/images/project/23042023/ha-noi-melody-residences-cover.jpg
+- Học về Background- image
+- Học về Position
 
-## 
-
-Font chữ: Asap
-
-## 
-Font chữ: Asap
-
-Lưu ý: Không cần click vào tab chuyển nội dung
+| Bài                                                             | Mô tả                |
+| :-------------------------------------------------------------- | :------------------- |
+| [Bài 1](https://buiduong2.github.io/F8-offline/day08/ex01.html) | Banner dự án         |
+| [Bài 2](https://buiduong2.github.io/F8-offline/day08/ex02.html) | Profile Chủ đầu Tư   |
+| [Bài 2](https://buiduong2.github.io/F8-offline/day08/ex03.html) | Khu vực bất động sản |

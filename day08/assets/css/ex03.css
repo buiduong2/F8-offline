@@ -95,7 +95,7 @@ html {
 }
 
 .sub-category-item:hover .sub-category-img::after {
-    background: none;
+    display: none;
 }
 
 .sub-category-item:hover img {
