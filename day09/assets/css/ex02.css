@@ -15,7 +15,6 @@ html {
     font-size: 10px;
 }
 
-
 .course-list {
     width: 1200px;
     margin: 20px auto;
@@ -129,6 +128,20 @@ html {
     color: white;
 }
 
+.course-item:hover .course-detail-wrapper {
+    background-color: var(--main-bg-color);
+}
+
+
+.course-item:hover .course-detail-wrapper::before {
+    inset: 15px;
+    border-color: inherit;
+}
+
+.course-item:hover .course-image {
+    opacity: 1;
+}
+
 .course-item:hover .course-icon {
     font-size: 0;
 }
@@ -147,20 +160,4 @@ html {
     color: var(--main-color);
     background-color: white;
     border-color: white;
-}
-
-
-.course-item:hover .course-detail-wrapper {
-    background-color: var(--main-bg-color);
-}
-
-
-.course-item:hover .course-detail-wrapper::before {
-    inset: 15px;
-    border-color: inherit;
-}
-
-
-.course-item:hover .course-image {
-    opacity: 1;
 }
