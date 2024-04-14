@@ -63,6 +63,7 @@ html {
     color: #7f7c7c;
     transition: ease-in-out 200ms font-size, linear 200ms top;
     font-size: 1.6rem;
+    cursor: text;
 }
 
 .form-text:not(:placeholder-shown)+.form-label,
@@ -134,9 +135,9 @@ html {
     cursor: pointer;
     transition: background-color 100ms ease-in-out;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 .form-btn:hover {
-    background-color: rgb(106, 106, 244);
+    background-color:#3f61b1;
 }

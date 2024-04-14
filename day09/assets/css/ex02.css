@@ -56,7 +56,7 @@ html {
     position: absolute;
     inset: 0;
     border: 1px transparent solid;
-    transition: inset ease-in-out var(--transition-duration), border-color ease-in-out var(--transition-duration);
+    transition: inset ease-in-out 500ms, border-color ease-in-out var(--transition-duration);
 }
 
 
