@@ -13,6 +13,10 @@ html {
     font-size: 10px;
 }
 
+.row {
+    display: flex;
+}
+
 
 .col1-3 {
     width: 33.333%;
@@ -20,6 +24,10 @@ html {
 
 .col2-3 {
     width: 66.6667%;
+}
+
+.col1-2 {
+    width: 50%;
 }
 
 
@@ -41,7 +49,8 @@ html {
     font-size: 1.3rem;
     font-weight: 500;
     padding-right: var(--distant-from-content-to-line);
-    width: 65%;
+    width: 80%;
+    max-width: 350px;
 }
 
 .timeline-item a {
@@ -59,20 +68,19 @@ html {
     padding: 15px 0;
     color: black;
     font-weight: 900;
+    display: inline-block;
 }
 
-
-.timeline-point-wrapper {
+.timeline-point,
+.timeline-year {
     position: absolute;
-    display: flex;
-    align-items: center;
     top: 50%;
-    transform: translateY(-50%);
     left: calc(100% + var(--distant-from-content-to-line));
-
 }
+
 
 .timeline-point {
+    transform: translate(-50%, -50%);
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -80,9 +88,7 @@ html {
     border: solid rgba(207, 246, 212, 1);
     box-shadow: 0px 0px 0 5px rgba(207, 246, 212, 0.586);
     background: linear-gradient(to top left, #576663, #6ee1cf);
-    transform: translateX(-50%);
     transition: border-width ease 300ms;
-    margin-right: 10px;
 }
 
 .timeline-item:hover .timeline-point {
@@ -92,17 +98,12 @@ html {
 
 
 .timeline-year {
+    transform: translate(var(--distant-from-content-to-line), -50%);
     width: max-content;
     font-size: 1.3rem;
-    margin-left: 20px;
-
-    /* ko bị giật */
-    position: absolute;
 }
 
-
 .timeline-body {
-    position: relative;
     padding-bottom: 40px;
 }
 
@@ -125,7 +126,6 @@ html {
 .timeline-description {
     line-height: 1.6;
     margin-bottom: 13px;
-
 }
 
 .timeline-button {
@@ -135,21 +135,24 @@ html {
     border: none;
     font-weight: inherit;
     background-color: #F3F3F3;
-    transition: ease 300ms background-color, color;
+
 }
 
-.timeline-item:hover .timeline-button {
+.timeline-button:hover {
     background-color: #A26F5A;
     color: white;
 }
 
 
+.timeline-image-list {
+    flex-grow: 1;
+    text-align: right;
+}
+
 .timeline-image-item {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
-    transform: translateX(30%);
-    width: 500px;
-    height: 500px;
+    width: 80%;
+    aspect-ratio: 1/1;
     position: relative;
 }
 
@@ -162,16 +165,15 @@ html {
 
 .illustration-info-wapper {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
-    width: 300px;
-    height: 400px;
+    height: 90%;
+    aspect-ratio: 3/4;
     background: url("../img/Phong-Van-1.jpg") no-repeat center /cover;
     background-color: black;
     position: absolute;
     bottom: 0;
     left: 0;
     transform: translate(-50%, 10%);
-    --padding-value: 15px;
-
+    --padding-value: 5%;
 }
 
 .illustration-blue-background {
@@ -182,18 +184,14 @@ html {
     left: var(--padding-value);
     right: var(--padding-value);
     bottom: var(--padding-value);
-    border: 10px solid transparent;
 }
 
 .illustration-description-wrapper {
     background: url("../img/Phong-Van-1.jpg") no-repeat center /cover;
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -212,3 +210,51 @@ html {
 .illustration-label {
     font-size: 1.8rem;
 }
+
+
+/* Hover-transform:  */
+
+.timeline-item-transition {
+    position: relative;
+    left: calc(100% + var(--distant-from-content-to-line));
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.timeline-item-transition>div {
+    position: relative;
+    left: calc(-100% - var(--distant-from-content-to-line));
+}
+
+
+.timeline-item-transition .timeline-year,
+.timeline-item-transition .tineline-heading,
+.timeline-item-transition .timeline-description {
+    transition: transform ease-in-out 300ms;
+}
+
+.timeline-item-transition .timeline-button {
+    transition: background-color ease 300ms,
+        color ease 300ms,
+        transform ease 300ms;
+}
+
+.timeline-item-transition:hover .tineline-heading {
+    transform: translateX(calc((100% + var(--distant-from-content-to-line) * 2)));
+}
+
+
+
+.timeline-item-transition:hover .timeline-button,
+.timeline-item-transition:hover .timeline-description {
+    transform: translateX(calc(100% + var(--distant-from-content-to-line) * 2));
+    text-align: left;
+}
+
+.timeline-item-transition:hover .timeline-year {
+    transform: translate(calc(-100% - var(--distant-from-content-to-line)), -50%);
+}
+
+
+/* END */
