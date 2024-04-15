@@ -106,6 +106,7 @@ html {
 
 .timeline-body {
     padding-bottom: 40px;
+    position: relative;
 }
 
 .timeline-item:last-of-type .timeline-body::after {
@@ -136,7 +137,8 @@ html {
     border: none;
     font-weight: inherit;
     background-color: #F3F3F3;
-
+    transition: background-color ease 300ms,
+        color ease 300ms;
 }
 
 .timeline-button:hover {
@@ -250,34 +252,23 @@ html {
     left: calc(-100% - var(--distant-from-content-to-line));
 }
 
-
-.timeline-item-transition .timeline-year,
-.timeline-item-transition .tineline-heading,
-.timeline-item-transition .timeline-description {
+.timeline-item-transition .transition-item {
     transition: transform ease-in-out 300ms;
 }
 
-.timeline-item-transition .timeline-button {
+.timeline-item-transition .timeline-button.transition-item {
     transition: background-color ease 300ms,
         color ease 300ms,
-        transform ease 300ms;
+        transform ease-in-out 300ms;
 }
 
-.timeline-item-transition:hover .tineline-heading {
-    transform: translateX(calc((100% + var(--distant-from-content-to-line) * 2)));
-}
-
-
-
-.timeline-item-transition:hover .timeline-button,
-.timeline-item-transition:hover .timeline-description {
-    transform: translateX(calc(100% + var(--distant-from-content-to-line) * 2));
-    text-align: left;
-}
-
-.timeline-item-transition:hover .timeline-year {
+.timeline-item-transition:hover .transition-slide-left {
     transform: translate(calc(-100% - var(--distant-from-content-to-line)), -50%);
 }
 
+.timeline-item-transition:hover .transition-slide-right {
+    transform: translateX(calc(100% + var(--distant-from-content-to-line) * 2));
+    text-align: left;
+}
 
 /* END */
