@@ -1,5 +1,6 @@
 :root {
     --distant-from-content-to-line: 25px;
+    --background-img-url: url("../img/Phong-Van-1.jpg")
 }
 
 * {
@@ -167,7 +168,7 @@ html {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
     height: 90%;
     aspect-ratio: 3/4;
-    background: url("../img/Phong-Van-1.jpg") no-repeat center /cover;
+    background: var(--background-img-url) no-repeat center /cover;
     background-color: black;
     position: absolute;
     bottom: 0;
@@ -177,17 +178,39 @@ html {
 }
 
 .illustration-blue-background {
-    background-color: #4961B4;
     color: white;
     position: absolute;
     top: var(--padding-value);
     left: var(--padding-value);
     right: var(--padding-value);
     bottom: var(--padding-value);
+    overflow: hidden;
+}
+
+.illustration-blue-background::after,
+.illustration-blue-background::before {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.illustration-blue-background::after {
+    inset: 0;
+    background-color: #4960b4e2;
+}
+
+.illustration-blue-background::before {
+    width: calc(100% + var(--padding-value) *2);
+    height: calc(100% + var(--padding-value) *2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(10px);
+    background: var(--background-img-url) no-repeat center / cover;
 }
 
 .illustration-description-wrapper {
-    background: url("../img/Phong-Van-1.jpg") no-repeat center /cover;
+    background: var(--background-img-url) no-repeat center /cover;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
