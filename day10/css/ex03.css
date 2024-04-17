@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(48, 43, 43);
+}
+
+:root {
+    --envelop-h: 150px;
+    --envelop-w: 300px;
+}
+
+.evenlop-wrapper {
+    margin: 300px auto 0;
+    width: calc(var(--envelop-w) * 2);
+}
+
+.envelop {
+    position: relative;
+    margin: 300px auto 0;
+    width: var(--envelop-w);
+    height: var(--envelop-h);
+    transition: transform ease-in-out 300ms 800ms;
+}
+
+.envelop-behind {
+    border: 1px solid black;
+    position: absolute;
+    inset: 0;
+    background-color: red;
+}
+
+.envelop-flap,
+.envelop-right,
+.envelop-left {
+    position: absolute;
+    border-top-width: calc(var(--envelop-h) /2);
+    border-bottom-width: calc(var(--envelop-h) /2);
+    border-left-width: calc(var(--envelop-w)/2);
+    border-right-width: calc(var(--envelop-w)/2);
+    border-style: solid;
+
+}
+
+.envelop-left {
+    border-color: rgb(247, 84, 84);
+    border-right-color: transparent;
+    border-top-color: transparent;
+}
+
+
+.envelop-right {
+    border-color: rgb(244, 59, 56);
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+
+.envelop-flap {
+    border-color: red;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    transform-origin: top center;
+    transition: transform ease-in-out 500ms 150ms,
+        z-index ease-in-out 1s;
+    z-index: 0;
+}
+
+.letter {
+    background: white;
+    position: absolute;
+    bottom: 1px;
+    left: 10%;
+    right: 10%;
+    overflow: hidden;
+    height: 120px;
+    transition: height ease-in-out 300ms;
+    --letter-line-height: 15px;
+}
+
+.letter-border-list {
+    display: flex;
+    height: var(--letter-line-height);
+    margin-bottom: var(--letter-line-height);
+}
+
+.letter-border-item {
+    background-color: red;
+    flex-grow: 1;
+    transform: skew(30deg);
+}
+
+.letter-border-item:nth-child(2n) {
+    background-color: white;
+}
+
+.letter-title {
+    height: var(--letter-line-height);
+    background-color: red;
+    width: 50%;
+    margin-left: 10px;
+    margin-bottom: var(--letter-line-height);
+}
+
+.letter-dear {
+    height: var(--letter-line-height);
+    background-color: red;
+    width: 40%;
+    margin-left: 10px;
+    margin-bottom: var(--letter-line-height);
+}
+
+.letter-circle {
+    margin-left: auto;
+    margin-right: calc(var(--letter-line-height) * 2);
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+
+.envelop-shadow {
+    margin: 80px auto 0;
+    height: 15px;
+    width: calc(var(--envelop-w) * 1.2);
+    background-color: black;
+    border-radius: 50%;
+    box-shadow: 0px 0px 28px 10px rgba(0, 0, 0, 0.75), 0 0 28px 15px rgba(0, 0, 0, 0.2);
+    transition: width ease-in-out 300ms 800ms, box-shadow ease-in-out 300ms 800ms;
+}
+
+
+
+/* Hover Transition */
+.envelop:hover {
+    transform: translateY(20px);
+    transition: transform ease-in-out 300ms;
+}
+
+.envelop:hover .letter {
+    height: calc(var(--envelop-h) *1.5);
+    transition: height ease-in-out 300ms 800ms;
+}
+
+
+.envelop:hover .envelop-flap {
+    transform: rotateX(180deg);
+    transition: transform ease-in-out 500ms 300ms,
+        z-index ease-in-out 0 800ms;
+    z-index: -1;
+}
+
+.envelop:hover+.envelop-shadow {
+    width: calc(var(--envelop-w) * 0.9);
+    transition: width ease-in-out 300ms, box-shadow ease-in-out 300ms;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.75), 0 0 10px 15px rgba(0, 0, 0, 0.2);
+}
