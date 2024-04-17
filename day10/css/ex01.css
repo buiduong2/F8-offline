@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #408ff6;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+
+
+.burger-menu-wrapper {
+    translate: -50% -50%;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    position: fixed;
+    background-color: white;
+    overflow: hidden;
+    transition: width ease-in-out 300ms, height ease-in-out 300ms;
+}
+
+
+.burger-menu {
+    position: absolute;
+    color: var(--main-color);
+    top: 50%;
+    left: 50%;
+}
+
+.menu-btn-list {
+    position: relative;
+}
+
+
+
+.menu-btn-item {
+    position: absolute;
+    border: none;
+    font-size: 25px;
+    background-color: transparent;
+    color: inherit;
+    transition: rotate ease-in-out 200ms,
+        visibility ease-in-out 0s 100ms;
+}
+
+.menu-btn-item label {
+    display: block;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.btn-close {
+    visibility: hidden;
+    rotate: -90deg;
+}
+
+
+.menu-list {
+    margin-top: 5vw;
+    list-style-type: none;
+    width: 200px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    transition: active ease-in-out 300ms;
+    display: block;
+}
+
+.menu-link label {
+    padding: 10px 30px;
+    display: block;
+    cursor: pointer;
+}
+
+input[name="input-menu-item"]:checked+.menu-link {
+    background-color: rgba(192, 188, 188, 0.651);
+}
+
+
+
+#show-burger-menu:checked~.burger-menu-wrapper {
+    width: 230vw;
+    height: 230vw;
+}
+
+#show-burger-menu:checked~.burger-menu-wrapper .btn-open {
+    rotate: 90deg;
+    visibility: hidden;
+}
+
+#show-burger-menu:checked~.burger-menu-wrapper .btn-close {
+    visibility: visible;
+    rotate: 0deg;
+}
+
+.section-content {
+    background-color: var(--main-color);
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.section-detail {
+    text-align: center;
+    margin-right: 100px;
+}
+
+.content-title {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.content-description {
+    font-weight: 100;
+    font-size: 20px;
+
+}
+
+.algin-text {
+    vertical-align: super;
+}
+
+.content-description .source-link {
+    color: inherit;
+    font-size: 35px;
+    text-decoration: none;
+    font-weight: 200;
+}

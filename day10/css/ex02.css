@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ccc;
+}
+
+
+.tab-browsing-wrapper {
+    margin: 50px auto;
+    width: 700px;
+}
+
+.tab-header {
+    background-color: white;
+}
+
+.tab-list {
+    list-style-type: none;
+    display: flex;
+    border: 1px solid #ccc;
+}
+
+.tab-item {
+    flex-grow: 1;
+    text-align: center;
+    padding: 5px;
+}
+
+.tab-item+.tab-item {
+    border-left: 1px solid #ccc;
+}
+
+.tab-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.tab-link label {
+    display: block;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.tab-body {
+    position: relative;
+    perspective-origin: 500% 200%;
+    perspective-origin: top center;
+    perspective: 200px;
+}
+
+.tab-content {
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    transform-origin: top center;
+    transition: transform ease-in-out 500ms, visibility ease-in-out 500ms, opacity ease-in-out 500ms;
+    transform: rotateX(-60deg);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.tab-content h1 {
+    margin-bottom: 20px;
+}
+
+.tab-content p {
+    line-height: 1.5;
+}
+
+
+input#tab-input-4:checked~.tab-header .tab-list .tab-item:nth-child(4) .tab-link,
+input#tab-input-3:checked~.tab-header .tab-list .tab-item:nth-child(3) .tab-link,
+input#tab-input-2:checked~.tab-header .tab-list .tab-item:nth-child(2) .tab-link,
+input#tab-input-1:checked~.tab-header .tab-list .tab-item:nth-child(1) .tab-link {
+    background-color: blue;
+    color: white;
+}
+
+input#tab-input-4:checked~.tab-body .tab-content:nth-child(4),
+input#tab-input-3:checked~.tab-body .tab-content:nth-child(3),
+input#tab-input-2:checked~.tab-body .tab-content:nth-child(2),
+input#tab-input-1:checked~.tab-body .tab-content:nth-child(1) {
+    transform: rotate(0);
+    visibility: visible;
+    opacity: 1;
+    transition: transform ease-in-out 500ms 250ms, visibility ease-in-out 500ms 250ms, opacity ease-in-out 500ms 250ms;
+}
