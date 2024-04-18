@@ -48,7 +48,6 @@ body {
 
 .tab-body {
     position: relative;
-    perspective-origin: 500% 200%;
     perspective-origin: top center;
     perspective: 200px;
 }
@@ -64,6 +63,7 @@ body {
     transform: rotateX(-60deg);
     visibility: hidden;
     opacity: 0;
+    overflow-x: scroll;
 }
 
 .tab-content h1 {
