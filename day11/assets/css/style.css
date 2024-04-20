@@ -1,0 +1,141 @@
+:root {
+    --nav-color: #4D4D4D;
+    --main-color: #F55556;
+    --sub-background-color: #fff;
+    --main-background-color: #FDECEC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+
+
+.section {
+    width: 1300px;
+    margin: 0 auto;
+
+}
+
+.section-header {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {}
+
+.header-logo img {
+    max-height: 42px;
+}
+
+.header-nav .nav-list {
+    display: flex;
+    list-style-type: none;
+    font-size: 1.4rem;
+}
+
+
+.nav-link {
+    color: inherit;
+    text-decoration: none;
+    padding: 7.5px;
+    margin-inline: 10px;
+    transition: color ease-in-out 100ms;
+    color: var(--nav-color);
+    font-weight: 500;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: var(--main-color);
+}
+
+.header-action-list {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+
+    padding-block: var(--acition-list-padding);
+    --acition-list-padding: 12px;
+    font-size: 1.6rem;
+}
+
+.form-search {
+    display: flex;
+}
+
+.form-icon {
+    padding-left: 20px;
+    font-size: 1.6rem;
+    color: #868789;
+}
+
+.form-input {
+    border: none;
+    outline: none;
+    font-size: inherit;
+    line-height: inherit;
+    padding-inline: 5px;
+}
+
+.form-input::placeholder {
+    transition: opacity ease-in-out 100ms;
+    color: black;
+    font-size: inherit;
+    font-weight: 500;
+}
+
+.form-input:focus::placeholder {
+    opacity: 0;
+}
+
+
+.shopping-cart {
+    position: relative;
+}
+
+
+.cart-icon {
+    font-size: 2.0rem;
+    padding-inline: 15px;
+    position: relative;
+    color: var(--nav-color);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-icon::before {
+    background-color: #f2f2f2;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 2px;
+    top: -2px;
+    bottom: -2px;
+    left: 0;
+}
+
+.cart-quantity {
+    position: absolute;
+    right: 0;
+    top: calc(-1 * var(--acition-list-padding));
+    transform: translate(50%, -50%);
+    color: white;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
