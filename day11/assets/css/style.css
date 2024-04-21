@@ -1,7 +1,8 @@
 :root {
     --nav-color: #4D4D4D;
     --main-color: #F55556;
-    --title-color: #2E2E2E;
+    --text-title-color: #2E2E2E;
+    --text-content-color: #676767;
     --sub-background-color: #fff;
     --main-background-color: #FDECEC;
 }
@@ -27,7 +28,11 @@ img {
 }
 
 .col-1-3 {
-    width: 33.333%;
+    width: 33.3333%;
+}
+
+.col-2-3 {
+    width: 66.6667%;
 }
 
 .col-1-2 {
@@ -48,6 +53,7 @@ img {
 }
 
 
+/* BASE button */
 .btn {
     border-radius: 12px;
     display: inline-block;
@@ -84,8 +90,6 @@ img {
 }
 
 /* ===== SECTION BASE ====== */
-
-
 .section-img img {
     width: 100%;
     height: 100%;
@@ -116,7 +120,7 @@ img {
 
 .section-desc {
     font-size: 1.8rem;
-    color: #676767;
+    color: var(--text-content-color);
     width: 70%;
     line-height: 1.7;
     margin-bottom: 55px;
@@ -136,6 +140,7 @@ img {
     align-items: center;
 }
 
+/* Logo */
 .header-logo a {
     display: block;
 }
@@ -144,6 +149,7 @@ img {
     max-height: 42px;
 }
 
+/* nav */
 .header-nav {
     width: fit-content;
     margin: 0 auto;
@@ -171,6 +177,8 @@ img {
     color: var(--main-color);
 }
 
+
+/* header-action-list */
 .header-action-list {
     width: fit-content;
     display: flex;
@@ -211,11 +219,9 @@ img {
     opacity: 0;
 }
 
-
 .shopping-cart {
     position: relative;
 }
-
 
 .cart-icon {
     font-size: 2.0rem;
@@ -296,7 +302,7 @@ img {
 
 .hero-desc {
     font-size: 1.8rem;
-    color: #676767;
+    color: var(--text-content-color);
     margin-bottom: 50px;
     width: 80%;
 }
@@ -329,7 +335,7 @@ img {
 .btn-order-process-desc {
     padding-left: 20px;
     font-weight: 500;
-    color: #2E2E2E;
+    color: var(--text-title-color);
 }
 
 .hero-img img {
@@ -339,7 +345,6 @@ img {
 }
 
 /* ===== Service SECTION====== */
-
 .section-service {
     padding-block: 100px;
     text-align: center;
@@ -352,7 +357,6 @@ img {
     margin-bottom: 5px;
 }
 
-
 .section-service .section-main-title {
     margin-inline: auto;
     width: 50%;
@@ -364,7 +368,6 @@ img {
     justify-content: center;
     gap: 60px;
 }
-
 
 .service-item {
     width: 23%;
@@ -412,7 +415,7 @@ img {
 }
 
 .service-title {
-    color: #2E2E2E;
+    color: var(--text-title-color);
     font-size: 2.2rem;
     font-weight: 600;
     margin-bottom: 15px;
@@ -420,12 +423,10 @@ img {
 
 .service-desc {
     font-size: 1.4rem;
-    color: #676767;
+    color: var(--text-content-color);
 }
 
-
 /* ===== Feature Product SECTION====== */
-
 .section-feature {
     padding-block: 50px;
 }
@@ -443,7 +444,6 @@ img {
 }
 
 /* ===== Feature Home Delivery SECTION====== */
-
 .section-feature.home-delivery .section-sub-title {
     color: #F9BA45;
 }
@@ -452,12 +452,11 @@ img {
     width: 80%;
 }
 
-/* ===== Feature SECTION====== */
+/* ===== Feature Mobile App Download SECTION====== */
 .mobile-app-download {
     padding-block: 100px;
     background-color: #FEF5F5;
 }
-
 
 .mobile-app-download .section-img {
     padding-inline: 28%;
@@ -476,7 +475,85 @@ img {
     gap: 12px;
 }
 
-
 .btn--mobile-store {
     border-color: #EEDCDC;
+}
+
+/* ===== Footer SECTION====== */
+.section-footer {
+    padding-top: 100px;
+}
+
+/* Footer Info List */
+.footer-info-list {
+    margin-bottom: 75px;
+}
+
+.info-header {
+    height: 70px;
+}
+
+.info-title {
+    color: var(--text-title-color);
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.info-content {
+    font-size: 1.6rem;
+    color: var(--text-content-color);
+}
+
+.info-content-paragraph {
+    line-height: 1.65;
+}
+
+
+.footer-info.info-about .info-content-paragraph {
+    max-width: 70%;
+}
+
+.info-content-list {
+    list-style-type: none;
+
+}
+
+.info-item a {
+    color: inherit;
+    text-decoration: none;
+    padding-block: 8px;
+    display: block;
+}
+
+.footer-info.info-contact .info-content-paragraph {
+    width: 90%;
+}
+
+.footer-divider {
+    border: 1px solid #ECECEC;
+}
+
+/* Footer Legal List */
+.footer-legal {
+    color: var(--text-content-color);
+    font-size: 1.4rem;
+    padding-block: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.legal-copyright {
+    font-weight: 400;
+}
+
+.compliance-list {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.compliance-item a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
 }
