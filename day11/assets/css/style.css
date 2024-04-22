@@ -510,6 +510,7 @@ img {
 }
 
 .info-content-paragraph {
+    padding-block: 8px;
     line-height: 1.65;
 }
 
