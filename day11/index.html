@@ -18,25 +18,33 @@
 
 <body>
     <!-- ======= Header Section ======= -->
-    <header class="container section-header row">
-        <div class="col-1-3">
+    <header class="container section-header">
+
+
+        <div class="col-left">
             <div class="header-logo">
                 <a href="./"> <img src="./assets/img/logo.svg" alt="Logo-Grover" title="Grover"></a>
             </div>
+            <!-- Mobile Nav-bar-icon -->
+            <div class="navbar-icon-wapper">
+                <button class="navbar-btn">
+                    <label for="show-nav-mobile"><img src="./assets/img/nav-bar.svg" alt="navbarSVG"></label>
+                </button>
+            </div>
         </div>
-
-        <div class="col-1-3 ">
+        <input hidden type="checkbox" id="show-nav-mobile">
+        <div class="col-right">
             <nav class="header-nav">
-                <ul class="nav-list">
+                <ul class="nav-list nav-list--lg nav-list--sm">
                     <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Menu</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Service</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
                 </ul>
             </nav>
-        </div>
 
-        <div class="col-1-3">
+
+
             <div class="header-action-list">
                 <form class="form-search" method="GET" action="#">
                     <label class="form-icon" for="search-input"><i class="fa-solid fa-magnifying-glass"></i></label>
