@@ -594,6 +594,12 @@ img {
     object-fit: contain;
 }
 
+@media screen and (max-width: 1199.98px) {
+    .hero-title {
+        font-size: 4.8rem;
+    }
+}
+
 @media screen and (max-width: 991.98px) {
     .hero-title {
         width: 100%;
@@ -719,6 +725,14 @@ img {
     }
 }
 
+
+@media screen and (max-width: 991.98px) {
+    .section-service .section-main-title {
+        width: 100%;
+    }
+}
+
+
 @media screen and (max-width: 767.98px) {
     .service-list {
         gap: 20px;
@@ -727,6 +741,10 @@ img {
 
     .service-item {
         width: 100%;
+    }
+
+    .service-item:hover .service-shadow {
+        transform: rotateZ(0);
     }
 }
 
