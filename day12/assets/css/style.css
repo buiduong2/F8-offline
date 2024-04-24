@@ -40,6 +40,16 @@ img {
     .col-1-2 {
         width: 50%;
     }
+
+
+    .col-3-5 {
+        width: 60%;
+    }
+
+    .col-2-5 {
+        width: 40%;
+    }
+
 }
 
 @media screen and (max-width: 991.98px) {
@@ -48,13 +58,6 @@ img {
     }
 }
 
-.col-3-5 {
-    width: 60%;
-}
-
-.col-2-5 {
-    width: 40%;
-}
 
 .container {
     margin: 0 auto;
@@ -141,10 +144,18 @@ img {
     color: var(--main-color);
 }
 
+
+@media screen and (max-width: 1399.98px) {
+    .btn {
+        min-width: 180px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+}
+
 @media screen and (max-width: 1199.98px) {
     .btn {
         min-width: 160px;
-        font-size: 1.6rem;
     }
 }
 
@@ -174,7 +185,6 @@ img {
 }
 
 .section-detail {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -194,7 +204,44 @@ img {
     flex-wrap: wrap;
 }
 
+
+
+@media screen and (max-width: 1399.98px) {
+
+    .section-sub-title {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    .section-main-title {
+        font-size: 3.2rem;
+        width: 100%;
+    }
+
+    .section-desc {
+        font-size: 1.6rem;
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 991.98px) {
+    .section-img {
+        order: 1;
+    }
+
+    .section-detail {
+        margin-top: 100px;
+        order: 2;
+    }
+}
+
 @media screen and (max-width: 767.98px) {
+    .section-detail {
+        align-items: center;
+        text-align: center;
+    }
+
     .section-actions {
         justify-content: center;
     }
@@ -661,11 +708,6 @@ img {
 }
 
 @media screen and (max-width:1399.98px) {
-    .section-service .section-main-title {
-        width: 100%;
-        font-size: 3.2rem;
-    }
-
     .service-list {
         gap: 48px;
     }
@@ -719,8 +761,10 @@ img {
     background-color: #FEF5F5;
 }
 
-.mobile-app-download .section-img {
-    padding-inline: 28%;
+.mobile-app-download .section-img img {
+    width: auto;
+    margin-inline: auto;
+    display: block;
 }
 
 .mobile-app-download .section-sub-title {
@@ -739,6 +783,28 @@ img {
 .btn--mobile-store {
     border-color: #EEDCDC;
 }
+
+.mobile-app-download .btn .btn-icon {
+    margin-right: 10px;
+}
+
+@media screen and (max-width:1399.98px) {
+    .mobile-app-download .section-main-title {
+        width: 90%;
+    }
+
+    .mobile-app-download .section-desc {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    .mobile-app-download .section-img {
+        margin-inline: auto;
+    }
+}
+
+
 
 /* ===== Footer SECTION====== */
 .section-footer {
