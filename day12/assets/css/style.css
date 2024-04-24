@@ -95,14 +95,13 @@ img {
 @media screen and (max-width: 767.98px) {
     .container {
         max-width: 540px;
+        padding-inline: 12px;
     }
 }
 
 @media screen and (max-width: 575.98px) {
     .container {
         max-width: 100%;
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
     }
 }
 
@@ -599,12 +598,13 @@ img {
 .service-list {
     margin-top: 60px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 60px;
 }
 
 .service-item {
-    width: 23%;
+    width: 25%;
     position: relative;
 }
 
@@ -637,6 +637,7 @@ img {
     position: relative;
     padding: 50px 28px;
     background-color: white;
+    height: 100%;
 }
 
 .service-icon {
@@ -657,6 +658,33 @@ img {
 .service-desc {
     font-size: 1.4rem;
     color: var(--text-content-color);
+}
+
+@media screen and (max-width:1399.98px) {
+    .section-service .section-main-title {
+        width: 100%;
+        font-size: 3.2rem;
+    }
+
+    .service-list {
+        gap: 48px;
+    }
+}
+
+@media screen and (max-width: 1199.98px) {
+    .service-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .service-list {
+        gap: 20px;
+    }
+
+    .service-item {
+        width: 100%;
+    }
 }
 
 /* ===== Feature Product SECTION====== */
