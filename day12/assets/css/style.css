@@ -25,6 +25,7 @@ img {
 
 .row {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .col-1-3 {
@@ -35,8 +36,16 @@ img {
     width: 66.6667%;
 }
 
-.col-1-2 {
-    width: 50%;
+@media screen and (min-width: 992px) {
+    .col-1-2 {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    .col-sm-full {
+        width: 100%;
+    }
 }
 
 .col-3-5 {
@@ -67,7 +76,6 @@ img {
 }
 
 @media screen and (max-width: 1199.98px) {
-
     .container {
         max-width: 960px;
     }
@@ -105,6 +113,7 @@ img {
     height: 70px;
     min-width: 200px;
     border: 1px solid transparent;
+    font-size: 2.0rem;
 }
 
 .btn a {
@@ -117,7 +126,6 @@ img {
     text-align: center;
     text-decoration: none;
     color: inherit;
-    font-size: 2.0rem;
     font-weight: 500;
 }
 
@@ -132,6 +140,19 @@ img {
     background-color: #FFFAFA;
     border-color: #f86061;
     color: var(--main-color);
+}
+
+@media screen and (max-width: 1199.98px) {
+    .btn {
+        min-width: 160px;
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 576.98px) {
+    .btn {
+        font-size: 1.2rem;
+    }
 }
 
 /* ===== SECTION BASE ====== */
@@ -171,7 +192,15 @@ img {
 
 .section-actions {
     display: flex;
+    flex-wrap: wrap;
 }
+
+@media screen and (max-width: 767.98px) {
+    .section-actions {
+        justify-content: center;
+    }
+}
+
 
 /* ===== HEADER SECTION====== */
 .section-header {
@@ -325,8 +354,6 @@ img {
 }
 
 @media screen and (max-width: 991.98px) {
-
-
     .col-left {
         width: 100%;
         display: flex;
@@ -452,7 +479,6 @@ img {
     font-weight: 500;
     border-radius: 999px;
     line-height: 16px;
-
 }
 
 .slogan-icon {
@@ -475,7 +501,7 @@ img {
 .hero-title .deliver-time {
     color: var(--main-color);
     font-weight: 500;
-    letter-spacing: -0.5rem;
+    letter-spacing: -0.05em;
 }
 
 .hero-desc {
@@ -521,6 +547,36 @@ img {
     height: 100%;
     object-fit: contain;
 }
+
+@media screen and (max-width: 991.98px) {
+    .hero-title {
+        width: 100%;
+        font-size: 3.8rem;
+        line-height: 58px;
+    }
+
+    .hero-title .deliver-time {
+        letter-spacing: -0.05em;
+    }
+
+    .hero-desc {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .section-hero {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 576.98px) {
+    .section-hero .section-actions {
+        gap: 0px;
+    }
+}
+
 
 /* ===== Service SECTION====== */
 .section-service {
