@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+
+html {
+    font-size: 10px;
+
+}
+
+body {
+    background: url("../img/landing-background.jpg") no-repeat center/ cover;
+    height: 100vh;
+}
+
+.partial-overlay {
+    position: fixed;
+    width: 65vw;
+    height: 65vw;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    background: white url("../img/dot-texture.png") repeat;
+}
+
