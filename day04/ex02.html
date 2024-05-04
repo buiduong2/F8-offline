@@ -24,12 +24,14 @@
                 </tr>
 
                 <tr>
-                    <td><input class="form-input" type="text" name="date" id="date" placeholder="DATE"></td>
-                    <td><input class="form-input" type="text" name="time" id="time" placeholder="TIME"></td>
+                    <td><input onfocus="this.type = 'date'" onblur="this.type='text'" class="form-input" type="text"
+                            name="date" id="date" placeholder="DATE"></td>
+                    <td><input onfocus="this.type = 'time'" onblur="this.type='text'" class="form-input" type="text"
+                            name="time" id="time" placeholder="TIME"></td>
                 </tr>
 
                 <tr>
-                    <td><input class="form-input" type="text" name="people" id="people" placeholder="PEOPLE"></td>
+                    <td><input class="form-input" type="number" name="people" id="people" placeholder="PEOPLE"></td>
                     <td><button class="form-btn" type="submit">Find A Table</button></td>
                 </tr>
             </table>

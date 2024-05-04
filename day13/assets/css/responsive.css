@@ -1,0 +1,77 @@
+@media screen and (max-width:1400px) {
+    .partial-overlay {
+        display: none;
+    }
+
+    .container {
+        padding-inline: 30px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 1200px) {
+    body {
+        background-position: left;
+    }
+
+    .forms-wrapper,
+    .form-info {
+        height: auto;
+    }
+
+    .form-item {
+        height: auto;
+    }
+
+
+    .form-info {
+        margin-block: 80px;
+    }
+
+
+    .info-description {
+        display: none;
+    }
+
+    .forms-wrapper {
+        justify-content: center;
+        position: relative;
+        height: auto;
+    }
+
+    .form-item {
+        position: static;
+        margin-bottom: 100px;
+    }
+
+    #form-login-select:not(:checked)~.container .form-login,
+    #form-register-select:not(:checked)~.container .form-register {
+        display: none;
+
+    }
+
+    .form-decorator-img-wrapper {
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .container {
+        padding-inline: 12px;
+    }
+
+    .info-title {
+        font-size: 6.0rem;
+    }
+
+    .info-action-list .btn {
+        width: 50%;
+    }
+
+    .form-item {
+        padding: 30px;
+    }
+
+}

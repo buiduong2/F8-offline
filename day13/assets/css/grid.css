@@ -19,50 +19,53 @@
     margin-top: calc(var(--row-space) * -1)
 }
 
-.row.gx-0>[class ^="col-"] {
-    --column-space: 0;
+.row.gy-0 {
+    --row-space: 0;
+}
 
+.row.gx-0 {
+    --column-space: 0;
 }
 
 
-.row.gx-1>[class ^="col-"] {
+.row.gx-1 {
     --column-space: calc(var(--spacer) * 0.25);
 }
 
-.row.gx-2>[class ^="col-"] {
+.row.gx-2 {
     --column-space: calc(var(--spacer) * 0.5);
 }
 
-.row.gx-3>[class ^="col-"] {
+.row.gx-3 {
     --column-space: calc(var(--spacer) * 1);
 }
 
-.row.gx-4>[class ^="col-"] {
+.row.gx-4 {
     --column-space: calc(var(--spacer) * 1.5);
 }
 
-.row.gx-5>[class ^="col-"] {
+.row.gx-5 {
     --column-space: calc(var(--spacer) * 3);
 }
 
 
-.row.gy-1>[class ^="col-"] {
+.row.gy-1 {
     --row-space: calc(var(--spacer) * 0.25);
 }
 
-.row.gy-2>[class ^="col-"] {
+.row.gy-2 {
     --row-space: calc(var(--spacer) * 0.5);
 }
 
-.row.gy-3>[class ^="col-"] {
+.row.gy-3 {
     --row-space: calc(var(--spacer) * 1);
 }
 
-.row.gy-4>[class ^="col-"] {
+.row.gy-4 {
     --row-space: calc(var(--spacer) * 1.5);
 }
 
-.row.gy-5>[class ^="col-"] {
+.row.gy-5 {
     --row-space: calc(var(--spacer) * 3);
 }
 
@@ -285,52 +288,52 @@
 /* xl */
 @media screen and (min-width: 1200px) {
 
-    .colxl-1 {
+    .col-xl-1 {
         --column-size: 1;
     }
 
-    .colxl-2 {
+    .col-xl-2 {
         --column-size: 2;
     }
 
-    .colxl-3 {
+    .col-xl-3 {
         --column-size: 3;
     }
 
-    .colxl-4 {
+    .col-xl-4 {
         --column-size: 4;
     }
 
-    .colxl-5 {
+    .col-xl-5 {
         --column-size: 5;
     }
 
-    .colxl-6 {
+    .col-xl-6 {
         --column-size: 6;
     }
 
 
-    .colxl-7 {
+    .col-xl-7 {
         --column-size: 7;
     }
 
-    .colxl-8 {
+    .col-xl-8 {
         --column-size: 8;
     }
 
-    .colxl-9 {
+    .col-xl-9 {
         --column-size: 9;
     }
 
-    .colxl-10 {
+    .col-xl-10 {
         --column-size: 10;
     }
 
-    .colxl-11 {
+    .col-xl-11 {
         --column-size: 11;
     }
 
-    .colxl-12 {
+    .col-xl-12 {
         --column-size: 12;
     }
 }

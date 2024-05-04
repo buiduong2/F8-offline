@@ -24,10 +24,18 @@ html {
 
 body {
     background: url("../img/landing-background.jpg") no-repeat center/ cover;
-    height: 100vh;
+}
+
+[class^="col"] {
+    padding: 0;
 }
 
 /* PARTIAL OVERLAY */
+.forms-wrapper,
+.form-info {
+    height: 100vh;
+}
+
 .partial-overlay {
     position: fixed;
     width: 65vw;
@@ -39,10 +47,10 @@ body {
     background: white url("../img/dot-texture.png") repeat;
     z-index: -1;
 }
+
 /* /PARTIAL OVERLAY */
 /* FROM INFO */
 .form-info {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -128,25 +136,37 @@ body {
 /* /FROM INFO */
 
 /* Form BASE */
-.form-wrapper {
+
+.forms-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.form-item {
     position: fixed;
     background-color: white;
     color: var(--color-form);
     padding: 65px;
     border-radius: 12px;
-    top: 50%;
-    transform: translateY(-50%);
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
     width: 500px;
     box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.05);
     transition: ease-in-out 500ms;
-    transition-property: transform, opacity;
+    transition-property: transform, opacity, visibility;
 }
 
+@media screen and (min-width: 1201px) {
 
-#form-login-select:not(:checked)~.container .form-login,
-#form-register-select:not(:checked)~.container .form-register {
-    transform: translate(50%, -50%);
-    opacity: 0;
+    #form-login-select:not(:checked)~.container .form-login,
+    #form-register-select:not(:checked)~.container .form-register {
+        transform: translate(50%, 0);
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 .form-decorator-img-wrapper {
@@ -294,9 +314,11 @@ body {
 
 
 /* FORM LOGIN */
-.f-space-between {
+.f-center {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .forgot-password-link {
@@ -318,6 +340,7 @@ body {
 .form-login .form-action .btn:hover {
     background-color: #4443ac;
 }
+
 /* /FORM LOGIN */
 
 /* SOCIAL LOGIN */
@@ -386,4 +409,5 @@ body {
 .youtube-link {
     background-color: #fd434f;
 }
+
 /* /SOCIAL LOGIN */
