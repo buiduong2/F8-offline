@@ -1,0 +1,334 @@
+:root {
+    --main-color: #ffa500;
+    --text-color: #efefef;
+    --text-color-bold: #fefefe;
+    --font-family-base: "Nunito", sans-serif;
+    --form-title-color: #444;
+    --form-input-color: #333;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+html {
+    font-size: 10px;
+    font-family: var(--font-family-base);
+}
+
+/* Base */
+.f-center {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+@media screen and (max-width:780px) {
+    .col-sm-off {
+        display: none;
+    }
+}
+
+/* Header-Section */
+
+.header-section {
+    padding-block: 20px;
+    background-color: rgba(51, 51, 51, .75);
+    position: relative;
+}
+
+/* Header Logo */
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color-bold);
+}
+
+.logo .hightlight {
+    color: var(--main-color);
+}
+
+
+/* Header nav-bar */
+.nav-bar {
+    font-size: 2.0rem;
+    color: var(--text-color);
+}
+
+.nav-bar .nav-list {
+    display: flex;
+}
+
+.nav-bar .nav-link {
+    padding-inline: 8px;
+}
+
+@media screen and (min-width:780px) {
+    .nav-bar {
+        position: absolute;
+        left: 50%;
+        translate: -50%;
+    }
+}
+
+/* Header ACtion */
+.header-actions {
+    font-size: 2.5rem;
+}
+
+.action-item {
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
+    padding-inline: 5px;
+    color: inherit;
+    color: var(--text-color-bold);
+}
+
+.nav-bar--molbile-icon label,
+.action-item label,
+.nav-link {
+    cursor: pointer;
+    transition: color ease-in-out 300ms;
+}
+
+.nav-bar--molbile-icon label:active,
+.action-item label:hover,
+.nav-link:hover {
+    color: var(--main-color);
+}
+
+.nav-bar--molbile-icon {
+    display: none;
+}
+
+.nav-bar--mobile {
+    display: none;
+}
+
+
+/* SEarch Action */
+.form-search {
+    position: absolute;
+    top: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    left: 0;
+    right: 0;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(51, 51, 51, .75);
+}
+
+.form-search .form-input {
+    flex-grow: 1;
+}
+
+.form-search .form-input input {
+    width: 100%;
+    font-size: 1.7rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.form-search .form-action button {
+    font-size: 3.0rem;
+    background-color: transparent;
+    border: none;
+    color: var(--text-color-bold);
+    padding-left: 10px;
+}
+
+#open-search-action:checked~.header-actions label[for='open-search-action'] .open-icon,
+#open-search-action:not(:checked)~.header-actions label[for='open-search-action'] .close-icon {
+    display: none;
+}
+
+#open-search-action:not(:checked)~.header-actions label[for='open-search-action'] .open-icon,
+#open-search-action:checked~.header-actions label[for='open-search-action'] .close-icon {
+    display: inline-block;
+}
+
+#open-search-action:not(:checked)~.form-search {
+    display: none;
+}
+
+
+/* FORM Resiter - FORM LOGIN */
+.modal-form {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-btn {
+    font-size: 3.0rem;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+.modal-btn label {
+    cursor: pointer;
+    padding: 20px;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.modal-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.modal-form .form-wrapper {
+    position: relative;
+    padding: 15px var(--wrapper-padding-inline);
+    background-color: white;
+    width: 500px;
+    max-width: 100%;
+    border-radius: 5px;
+    margin: 20px;
+    /* BUG fixed height */
+    --wrapper-padding-inline: 20px;
+    height: 310px;
+    overflow: hidden;
+}
+
+.modal-form .form-item {
+    position: absolute;
+    left: var(--wrapper-padding-inline);
+    right: var(--wrapper-padding-inline);
+}
+
+.modal-form .form-title-wrapper {
+    display: flex;
+    color: var(--form-title-color);
+    justify-content: space-around;
+}
+
+.modal-form .form-title {
+    font-size: 3.0rem;
+    padding-block: 10px;
+    transition: color ease-in-out 200ms;
+
+}
+
+.modal-form .form-title label {
+    cursor: pointer;
+}
+
+.modal-form .form-group {
+    margin-bottom: 12px;
+}
+
+.modal-form .form-input {
+    color: var(--form-input-color);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 1.7rem;
+    width: 100%;
+    padding: 10px;
+    line-height: 1.3;
+    transition: border-color ease 300ms;
+}
+
+.modal-form .form-input:focus {
+    border-color: var(--main-color);
+}
+
+.modal-form .form-actions {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-form .form-action-item {
+    padding-block: 10px;
+}
+
+.modal-form .action-link {
+    color: var(--main-color);
+}
+
+.modal-form .action-link:hover {
+    text-decoration: underline;
+}
+
+.form-action-item input#remember {
+    margin-right: 5px;
+}
+
+.modal-form .form-submit button {
+    padding: 10px;
+    width: 100%;
+    color: white;
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: ease-in-out 200ms;
+    transition-property: border-color, background-color;
+}
+
+.modal-form .form-submit button:hover {
+    background-color: rgba(255, 165, 0, .2);
+    color: var(--main-color);
+}
+
+.modal-form {
+    transition: transform 300ms ease-in-out, visibility ease-in-out 300ms;
+}
+
+input#open-modal-form:not(:checked)~.modal-form {
+    visibility: hidden;
+    transform: translateY(-100%);
+
+}
+
+input#open-modal-form:checked~.modal-form {
+    visibility: visible;
+    transform: translateY(0);
+}
+
+input#radio-register:checked~.form-title-wrapper .form-title--register,
+input#radio-login:checked~.form-title-wrapper .form-title--login {
+    color: var(--main-color);
+}
+
+input#radio-login:not(:checked)~.form-login,
+input#radio-register:not(:checked)~.form-register {
+    visibility: hidden;
+    transform: translateY(80%);
+    transition: transform 150ms ease-in-out, visibility ease-in-out 150ms;
+}
+
+
+input#radio-login:checked~.form-login,
+input#radio-register:checked~.form-register {
+    visibility: visible;
+    transition: transform 150ms 150ms ease-in-out, visibility ease-in-out 300ms 150ms;
+}
