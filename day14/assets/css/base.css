@@ -1,0 +1,155 @@
+:root {
+    --main-color: #ffa500;
+    --text-color: #efefef;
+    --text-color-bold: #fefefe;
+    --font-family-base: "Nunito", sans-serif;
+    --form-title-color: #444;
+    --form-input-color: #333;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+html {
+    font-size: 10px;
+    font-family: var(--font-family-base);
+}
+
+/* Base */
+
+.f-center {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+@media screen and (max-width:780px) {
+    .col-sm-off {
+        display: none;
+    }
+}
+
+
+.header-section {
+    padding-block: 20px;
+    background-color: rgba(34, 34, 34, .9);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.test {
+    margin-top: 200px;
+}
+
+.btn {
+    font-size: 2.0rem;
+    color: #333;
+    padding: 7px 11px;
+    border-radius: 99px;
+    border: 1.6px solid var(--main-color);
+    background-color: var(--main-color);
+    cursor: pointer;
+    transition-property: background-color,color;
+    transition: ease-in-out 150ms;
+    display: inline-block;
+}
+
+.btn:hover {
+    color: var(--text-color);
+    background-color: rgba(255, 165, 0, 0.2);
+}
+
+/* Header Logo */
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color-bold);
+    z-index: 2;
+}
+
+.logo .hightlight {
+    color: var(--main-color);
+}
+
+/* Header nav-bar */
+.nav-bar {
+    font-size: 2.0rem;
+    color: var(--text-color);
+}
+
+.nav-bar .nav-list {
+    display: flex;
+}
+
+.nav-bar .nav-link {
+    padding-inline: 8px;
+}
+
+@media screen and (min-width:780px) {
+    .nav-bar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Header ACtion */
+.header-actions {
+    font-size: 2.5rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+.action-item {
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
+    padding-inline: 5px;
+    color: inherit;
+    color: var(--text-color-bold);
+}
+
+.nav-bar--molbile-icon label,
+.action-item label,
+.nav-link {
+    cursor: pointer;
+    transition: color ease-in-out 300ms;
+}
+
+.nav-bar--molbile-icon label:active,
+.action-item label:hover,
+.nav-link:hover {
+    color: var(--main-color);
+}
+
+.nav-bar--molbile-icon {
+    display: none;
+}
+
+.nav-bar--mobile {
+    display: none;
+}

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/base-responsive.css">
+    <link rel="stylesheet" href="./assets/css/destination-style.css">
+    <link rel="stylesheet" href="./assets/css/destination-transition.css">
+
+</head>
+
+<body>
+    <input type="checkbox" id="checkbox-dark-mode" hidden>
+    <header class="header-section">
+        <div class="container">
+            <div class="row gx-0 gy-0 f-center full-width">
+                <input type="checkbox" id="open-nav-mobile" hidden>
+                <input type="checkbox" id="open-modal-form" hidden>
+
+                <!-- Navbar -- Mobile -->
+                <div class="nav-bar--molbile-icon">
+                    <label for="open-nav-mobile"><i class="fa-solid fa-bars"></i></label>
+                </div>
+                <nav class="nav-bar--mobile">
+                    <div class="container">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a class="nav-link" href="#">Trang Chủ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Đặt Lịch</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Ưu Đãi</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Dịch Vụ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Thư Viện</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Đánh Giá</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Liên Hệ</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- /Navbar -- Mobile -->
+                <h1 class="logo">
+                    <a href="./"> <span class="hightlight">S</span>TRAVEL</a>
+                </h1>
+
+                <nav class="nav-bar">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a class="nav-link" href="#">Trang Chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Điểm Đến</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Dịch Vụ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Ảnh</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="action-item">
+                        <label for="checkbox-dark-mode">
+                            <i class="darkmode-on-icon fa-solid fa-gear"></i>
+                            <i class="darkmode-off-icon fa-regular fa-moon"></i>
+                        </label>
+                    </button>
+                    <button class="btn">Đặt Ngay</button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <section class="section-home" id="home">
+
+        <div class="home-content">
+            <div class="background-wrapper">
+                <img src="./assets/img/mumei-bg.jpg" alt="Mumbai Bg" title="Mumbai">
+            </div>
+            <h2 class="home-title-name">Mumbai</h2>
+            <h3 class="home-title-desc">Thành Phố Có Tất Cả</h3>
+            <p class="home-desc">Mumbai Không Chỉ Là Trung Tâm Tài Chính – Kinh Tế, Kinh Đô Điện Ảnh – Thời Trang Của Ấn
+                Độ, Mà Đây Còn Là Thành Phố Cảng Vừa Hiện Đại Nhưng Vẫn Mang Nhiều Nét Cổ Kính Với Những Công Trình Kiến
+                Trúc, Quán Bar, Nhà Hàng, Viện Bảo Tàng Và Các Cửa Hàng Thời Trang Hấp Dẫn…</p>
+            <button class="btn">Tìm Hiểu Thêm</button>
+        </div>
+    </section>
+
+    <section class="section-order">
+        <div class="row gy-0 f-center">
+            <div class="col-6">
+                <h2 class="order-title">Ưu Đãi 30.000.000 Cho 5người/3ngày</h2>
+            </div>
+            <div class="col-6">
+                <button class="btn">Đặt Ngay</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <input type="radio" name="radio-background" id="radio-video-1" hidden checked>
+                    <input type="radio" name="radio-background" id="radio-video-2" hidden>
+                    <input type="radio" name="radio-background" id="radio-video-3" hidden>
+                    <div class="about-video-wrapper">
+                        <img class="about-video" src="./assets/img/home-img.png" alt="">
+                        <img class="about-video" src="./assets/img/home-img-2.png" alt="">
+                        <img class="about-video" src="./assets/img/home-img-3.png" alt="">
+                    </div>
+
+                    <div class="about-actions">
+                        <div class="about-action-item"><label for="radio-video-1"></label></div>
+                        <div class="about-action-item"><label for="radio-video-2"></label></div>
+                        <div class="about-action-item"><label for="radio-video-3"></label></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="about-content">
+                        <h3 class="section-sub-title">Tại Sao Nên Chọn Stravel</h3>
+                        <h2 class="section-main-title">Trải Nghiệm Bậc Nhất</h2>
+                        <p class="about-desc">Chúng Tôi Hợp Tác Với Những Địa Điểm Nghỉ Dưỡng Có Trải Nghiệm Bậc Nhất Để
+                            Đem
+                            Lại Một Kỳ Nghỉ Tuyệt Vời Cho Bạn Cùng Người Thân</p>
+                        <button class="btn">Tìm hiểu thêm về Stravel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section destination">
+        <div class="container">
+            <h3 class="section-sub-title">Những Điểm Đến Ở Mumbai</h3>
+            <h2 class="section-main-title">Những Điểm Du Lịch Bậc Nhất</h2>
+
+
+            <div class="destination-list">
+                <div class="row gx-4 gy-4">
+                    <div class="col-3 ">
+                        <article class="destination-item">
+                            <div class="destination-img-wrapper">
+                                <img src="./assets/img/des-1.jpg" alt="DEstination-1" title="Ấn Độ Môn">
+                            </div>
+                            <div class="destination-content">
+                                <h4 class="destination-title">
+                                    Ấn Độ Môn
+                                </h4>
+                                <p class="destination-desc">
+                                    Được Xây Dựng Vào Năm 1931, Còn Có Tên Gọi Khác Là “Bia Kỷ Niệm Chiến Sĩ Ấn Độ”
+                                </p>
+                                <div class="destination-link-wrapper">
+                                    <a class="destination-link" href="#">Đọc Thêm
+                                        <i class="destination-icon fas fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-3 ">
+                        <article class="destination-item">
+                            <div class="destination-img-wrapper">
+                                <img src="./assets/img/des-2.jpg" alt="DEstination-1" title="Ấn Độ Môn">
+                            </div>
+                            <div class="destination-content">
+                                <h4 class="destination-title">
+                                    Tòa Nhà Hình Trứng
+                                </h4>
+                                <p class="destination-desc">
+                                    Nghệ Thuật Kiến Trúc Thị Giác Kết Hợp Với Cách Sản Xuất, Sử Dụng Và Tái Tạo Năng
+                                    Lượng Thông Minh </p>
+                                <div class="destination-link-wrapper">
+                                    <a class="destination-link" href="#">Đọc Thêm
+                                        <i class="destination-icon fas fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-3 ">
+                        <article class="destination-item">
+                            <div class="destination-img-wrapper">
+                                <img src="./assets/img/des-3.jpg" alt="DEstination-1" title="Ấn Độ Môn">
+                            </div>
+                            <div class="destination-content">
+                                <h4 class="destination-title" title="Vườn Quốc Gia Sanjay Gandhi">
+                                    Vườn Quốc Gia Sanjay Gandhi
+                                </h4>
+                                <p class="destination-desc">
+                                    Bao Gồm Loài Bướm Đêm Atlas – Bướm Đêm Lớn Nhất Thế Giới, Cây Hoa Karvi 7 Năm Nở Hoa
+                                    Một Lần… </p>
+                                <div class="destination-link-wrapper">
+                                    <a class="destination-link" href="#">Đọc Thêm
+                                        <i class="destination-icon fas fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-3 ">
+                        <article class="destination-item">
+                            <div class="destination-img-wrapper">
+                                <img src="./assets/img/des-4.jpg" alt="DEstination-1" title="Ấn Độ Môn">
+                            </div>
+                            <div class="destination-content">
+                                <h4 class="destination-title" title="Trung Tâm Triễn Lãm Jehanggir">
+                                    Trung Tâm Triễn Lãm Jehanggir
+                                </h4>
+                                <p class="destination-desc">
+                                    Khu Vực Triển Lãm Hàng Đầu Ở Mumbai Dành Cho Nền Mỹ Thuật Ấn Độ Đương Đại </p>
+                                <div class="destination-link-wrapper">
+                                    <a class="destination-link" href="#">Đọc Thêm
+                                        <i class="destination-icon fas fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-3 ">
+                        <article class="destination-item">
+                            <div class="destination-img-wrapper">
+                                <img src="./assets/img/des-5.jpg" alt="DEstination-1" title="Ấn Độ Môn">
+                            </div>
+                            <div class="destination-content">
+                                <h4 class="destination-title">
+                                    Hang Động Elephanta
+                                </h4>
+                                <p class="destination-desc">
+                                    Lưu Giữ Nhiều Kiến Trúc Chạm Khắc Tinh Xảo Và Chúng Đã Xuất Hiện Ở Đây Từ Thế Kỷ Thứ
+                                    5 Đến Thứ 8 </p>
+                                <div class="destination-link-wrapper">
+                                    <a class="destination-link" href="#">Đọc Thêm
+                                        <i class="destination-icon fas fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-3 ">
+                        <article class="destination-item">
+                            <div class="destination-img-wrapper">
+                                <img src="./assets/img/des-6.jpg" alt="DEstination-1" title="Ấn Độ Môn">
+                            </div>
+                            <div class="destination-content">
+                                <h4 class="destination-title">
+                                    Lonavala Và Khandala
+                                </h4>
+                                <p class="destination-desc">
+                                    Khu Nghỉ Dưỡng Rất Nổi Tiếng, Nằm Giữa Đường Cao Tốc Mumbai – Pune. </p>
+                                <div class="destination-link-wrapper">
+                                    <a class="destination-link" href="#">Đọc Thêm
+                                        <i class="destination-icon fas fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-3 ">
+                        <article class="destination-item">
+                            <div class="destination-img-wrapper">
+                                <img src="./assets/img/des-7.jpg" alt="DEstination-1" title="Ấn Độ Môn">
+                            </div>
+                            <div class="destination-content">
+                                <h4 class="destination-title">
+                                    Thành Phố Pune
+                                </h4>
+                                <p class="destination-desc">
+                                    Giáo Dục, Nghệ Thuật Và Âm Nhạc Là Trọng Tâm Tại Thành Phố Có Nền Văn Hóa Phong Phú
+                                    Lâu Đời Này </p>
+                                <div class="destination-link-wrapper">
+                                    <a class="destination-link" href="#">Đọc Thêm
+                                        <i class="destination-icon fas fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-3 ">
+                        <article class="destination-item">
+                            <div class="destination-img-wrapper">
+                                <img src="./assets/img/des-8.jpg" alt="DEstination-1" title="Ấn Độ Môn">
+                            </div>
+                            <div class="destination-content">
+                                <h4 class="destination-title">
+                                    Thành Phố Nashik
+                                </h4>
+                                <p class="destination-desc">
+                                    Là Trung Tâm Hành Hương Lớn Của Người Hindu. Nashik Có Sự Pha Trộn Của Nét Cổ Xưa Và
+                                    Hiện Đại </p>
+                                <div class="destination-link-wrapper">
+                                    <a class="destination-link" href="#">Đọc Thêm
+                                        <i class="destination-icon fas fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section section-service">
+        <div class="container">
+            <h3 class="section-sub-title">Dịch Vụ</h3>
+            <h2 class="section-main-title">Nâng Cao Trải Nghiệm</h2>
+
+            <div class="service-list">
+                <div class="row row gx-4 gy-4">
+                    <div class="col-4">
+                        <article class="service-item">
+                            <div class="service-icon-wrapper">
+                                <i class="service-icon fas fa-globe"></i>
+                            </div>
+
+                            <h4 class="serivce-title">Rộng Khắp Thế Giới</h4>
+                            <p class="service-desc">Some Text...</p>
+                        </article>
+                    </div>
+
+                    <div class="col-4">
+                        <article class="service-item">
+                            <div class="service-icon-wrapper">
+                                <i class="service-icon fas fa-hiking"></i>
+                            </div>
+
+                            <h4 class="serivce-title">Những Cuộc Phiêu Lưu </h4>
+                            <p class="service-desc">Some Text...</p>
+                        </article>
+                    </div>
+
+                    <div class="col-4">
+                        <article class="service-item">
+                            <div class="service-icon-wrapper">
+                                <i class="service-icon fas fa-utensils"></i>
+                            </div>
+
+                            <h4 class="serivce-title">Dịch Vụ Ăn Uống </h4>
+                            <p class="service-desc">Some Text...</p>
+                        </article>
+                    </div>
+
+                    <div class="col-4">
+                        <article class="service-item">
+                            <div class="service-icon-wrapper">
+                                <i class="service-icon fas fa-hotel"></i>
+                            </div>
+
+                            <h4 class="serivce-title">Nghỉ Dưỡng Cao Cấp </h4>
+                            <p class="service-desc">Some Text...</p>
+                        </article>
+                    </div>
+
+                    <div class="col-4">
+                        <article class="service-item">
+                            <div class="service-icon-wrapper">
+                                <i class="service-icon fas fa-wallet"></i>
+                            </div>
+
+                            <h4 class="serivce-title">Giá Tốt Nhất </h4>
+                            <p class="service-desc">Some Text...</p>
+                        </article>
+                    </div>
+
+                    <div class="col-4">
+                        <article class="service-item">
+                            <div class="service-icon-wrapper">
+                                <i class="service-icon fas fa-headset"></i>
+                            </div>
+
+                            <h4 class="serivce-title">Hỗ Trợ 24/7 </h4>
+                            <p class="service-desc">Some Text...</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section section-gallery">
+        <div class="container">
+            <h2 class="section-single-title">Những Bức Ảnh Về Mumbai </h2>
+
+            <div class="garllery-list">
+                <div class="row gx-4 gy-4">
+                    <div class="col-4">
+                        <article class="gallery-item">
+                            <div class="gallery-img-wrapper">
+                                <img src="./assets/img/gallery-img-1.jpg" alt="">
+                            </div>
+                            <p class="gallery-desc">Thành Phố Mumbai</p>
+                            <h4 class="gallery-title">Vườn Quốc Gia Sanjay Gandhi </h4>
+                        </article>
+                    </div>
+
+                    <div class="col-4">
+                        <article class="gallery-item">
+                            <div class="gallery-img-wrapper">
+                                <img src="./assets/img/gallery-img-2.jpg" alt="">
+                            </div>
+                            <h4 class="gallery-title">Nhà Thờ St John The Evangelist</h4>
+                        </article>
+                    </div>
+
+                    <div class="col-4">
+                        <article class="gallery-item">
+                            <div class="gallery-img-wrapper">
+                                <img src="./assets/img/gallery-img-3.jpg" alt="">
+                            </div>
+                            <p class="gallery-desc">Nằm Trên Đỉnh Ngọn Đồi Malabar Ở Mumbai</p>
+                            <h4 class="gallery-title">Vườn Treo Mumbai</h4>
+                        </article>
+                    </div>
+
+                    <div class="col-4">
+                        <article class="gallery-item">
+                            <div class="gallery-img-wrapper">
+                                <img src="./assets/img/gallery-img-4.jpg" alt="">
+                            </div>
+                            <p class="gallery-desc">Bảo Tàng Viện Của Thành Phố Mumbai</p>
+                            <h4 class="gallery-title">Dr. Bhau Daji Lad</h4>
+                        </article>
+                    </div>
+
+                    <div class="col-4">
+                        <article class="gallery-item">
+                            <div class="gallery-img-wrapper">
+                                <img src="./assets/img/gallery-img-5.jpg" alt="">
+                            </div>
+                            <p class="gallery-desc">Di Sản Thế Giới Được UNESCO Nhìn Nhận</p>
+                            <h4 class="gallery-title">Tòa Đô Chánh Mumbai</h4>
+                        </article>
+                    </div>
+
+                    <div class="col-4">
+                        <article class="gallery-item">
+                            <div class="gallery-img-wrapper">
+                                <img src="./assets/img/gallery-img-6.jpg" alt="">
+                            </div>
+                            <p class="gallery-desc">Mumbai</p>
+                            <h4 class="gallery-title">Kiến Trúc Thời Victoria</h4>
+                        </article>
+                    </div>
+
+                    <div class="col-4">
+                        <article class="gallery-item">
+                            <div class="gallery-img-wrapper">
+                                <img src="./assets/img/gallery-img-7.jpg" alt="">
+                            </div>
+                            <p class="gallery-desc">Khách Sạn 5 Sao Ở Mumbai</p>
+                            <h4 class="gallery-title">Khách Sạn Taj Mahal</h4>
+                        </article>
+                    </div>
+
+                    <div class="col-4">
+                        <article class="gallery-item">
+                            <div class="gallery-img-wrapper">
+                                <img src="./assets/img/gallery-img-8.jpg" alt="">
+                            </div>
+                            <p class="gallery-desc">Phía Đông Thành Phố Mumbai</p>
+                            <h4 class="gallery-title">Hang Động Elephanta</h4>
+                        </article>
+                    </div>
+
+                    <div class="col-4">
+                        <article class="gallery-item">
+                            <div class="gallery-img-wrapper">
+                                <img src="./assets/img/gallery-img-6.jpg" alt="">
+                            </div>
+                            <p class="gallery-desc">Mumbai</p>
+                            <h4 class="gallery-title">Phiên Chợ Địa Phương</h4>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-review">
+        <div class="container">
+            <div class="row gx-5 gy-5">
+                <div class="col-6">
+                    <div class="review-heading">
+                        <h2 class="section-single-title">Những Lời Đánh Giá Tốt Nhất </h2>
+                        <p class="review-desc">Tất Cả Những Lời Đánh Giá Chúng Tôi Đều Ghi Nhận Và Tiếp Thu Để Phát
+                            Triển. Đây Là Những Đánh Giá Tốt Nhất Về Chuyến Đi Mumbai Này.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="review-list">
+                        <div class="row gx-4 gy-4">
+                            <div class="col-6">
+                                <blockquote class="review-item">
+                                    <div class="review-text">Chuyến Đi Rất Vui, Giá Rất Rẻ. Gọi Tư Vấn Rất Nhanh. Tôi Sẽ
+                                        Quay Lại Đay Môt Lần Nữa
+                                    </div>
+                                    <div class="review-author">
+                                        <div class="author-avatar-wrapper">
+                                            <img src="./assets/img/pic-1.png" alt="Author-1 Avatar">
+                                        </div>
+
+                                        <div class="author-detail">
+                                            <h4 class="author-name"> Duong Nguyen</h4>
+                                            <p class="author-job">Nội Trợ</p>
+                                        </div>
+
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <div class="col-6">
+                                <blockquote class="review-item">
+                                    <div class="review-text">Chuyến Đi Rất Vui, Đáng Để Thử. Đồ Ăn Ở Đây Rất Ngon. Chắc
+                                        Chắn Sẽ Quay Lại Vì Đồ Ăn Hihi
+                                    </div>
+                                    <div class="review-author">
+                                        <div class="author-avatar-wrapper">
+                                            <img src="./assets/img/pic-2.png" alt="Author-1 Avatar">
+                                        </div>
+
+                                        <div class="author-detail">
+                                            <h4 class="author-name"> Some People </h4>
+                                            <p></p>
+                                        </div>
+
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <div class="col-6">
+                                <blockquote class="review-item">
+                                    <div class="review-text">Chuyến Đi Rất Vui, Giá Rất Rẻ. Gọi Tư Vấn Rất Nhanh. Tôi Sẽ
+                                        Quay Lại Đay Môt Lần Nữa
+                                    </div>
+                                    <div class="review-author">
+                                        <div class="author-avatar-wrapper">
+                                            <img src="./assets/img/pic-3.png" alt="Author-1 Avatar">
+                                        </div>
+
+                                        <div class="author-detail">
+                                            <h4 class="author-name"> Some People </h4>
+                                            <p class="author-job">Nằm Nhà</p>
+                                        </div>
+
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <div class="col-6">
+                                <blockquote class="review-item">
+                                    <div class="review-text">Chuyến Đi Rất Vui, Giá Rất Rẻ. Gọi Tư Vấn Rất Nhanh. Tôi Sẽ
+                                        Quay Lại Đay Môt Lần Nữa
+                                    </div>
+                                    <div class="review-author">
+                                        <div class="author-avatar-wrapper">
+                                            <img src="./assets/img/pic-4.png" alt="Author-1 Avatar">
+                                        </div>
+
+                                        <div class="author-detail">
+                                            <h4 class="author-name"> Some People</h4>
+                                            <p class="author-job">...</p>
+                                        </div>
+
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section section-contact">
+        <h2 class="section-single-title">LIÊN LẠC</h2>
+
+        <div class="row">
+            <div class="col-4">
+                <div class="map-wrapper"></div>
+            </div>
+            <div class="col-6">
+                <form action="#" method="POST"></form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

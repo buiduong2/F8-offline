@@ -1,0 +1,31 @@
+.about-video-wrapper img {
+    transition: opacity ease-in-out 150ms;
+    opacity: 0;
+}
+
+input#radio-video-3:checked~.about-video-wrapper .about-video:nth-child(3) {
+    transform: translate(-200%);
+    opacity: 1;
+    transition-delay: 150ms;
+}
+
+input#radio-video-2:checked~.about-video-wrapper .about-video:nth-child(2) {
+    transform: translate(-100%);
+    opacity: 1;
+    transition-delay: 150ms;
+}
+
+input#radio-video-1:checked~.about-video-wrapper .about-video:nth-child(1) {
+    opacity: 1;
+    transition-delay: 150ms;
+}
+
+.about-action-item label {
+    transition: background-color ease-in-out 300ms;
+}
+
+input#radio-video-1:checked~.about-actions label[for='radio-video-1'],
+input#radio-video-2:checked~.about-actions label[for='radio-video-2'],
+input#radio-video-3:checked~.about-actions label[for='radio-video-3'] {
+    background-color: var(--main-color);
+}
