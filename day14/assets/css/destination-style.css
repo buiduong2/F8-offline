@@ -135,6 +135,8 @@ html {
 
 /* Box BASE */
 .box-item {
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     overflow: hidden;
     height: 100%;
@@ -156,6 +158,9 @@ html {
 .box-content {
     background-color: var(--background-white);
     padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .box-title {
@@ -525,11 +530,6 @@ input#checkbox-dark-mode:checked~main .secion-header .darkmode-on-icon {
     margin-top: 20px;
 }
 
-.section-destination .box-item {
-    display: flex;
-    flex-direction: column;
-}
-
 .section-destination .box-item:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, .05);
 }
@@ -546,9 +546,6 @@ input#checkbox-dark-mode:checked~main .secion-header .darkmode-on-icon {
 
 .section-destination .box-content {
     text-align: center;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
 }
 
 .section-destination .box-title {
@@ -741,7 +738,9 @@ textarea.form-input {
 
 .blog-meta-info {
     font-size: 1.4rem;
+    flex-grow: 1;
     display: flex;
+    align-items: flex-end;
     justify-content: space-between;
     color: var(--color-text);
 }
