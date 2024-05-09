@@ -29,3 +29,102 @@ input#radio-video-2:checked~.about-actions label[for='radio-video-2'],
 input#radio-video-3:checked~.about-actions label[for='radio-video-3'] {
     background-color: var(--main-color);
 }
+
+.loading-indicator {
+    position: fixed;
+    inset: 0;
+    background-color: white;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade 2s linear 1 forwards;
+}
+
+
+.loading-content {
+
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.loading-content div {
+    flex-grow: 1;
+    width: 50px;
+    margin: 25px;
+    background-color: yellow;
+    box-shadow: 8px 3px 17px 2px rgba(235, 244, 1, 0.75);
+    height: 20px;
+    border-radius: 99px;
+
+    transform-origin: left center;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-name: rotateIn;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+.loading-content div:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.loading-content div:nth-child(3) {
+    animation-delay: 1.6s;
+}
+
+.loading-content div:nth-child(4) {
+    animation-delay: 2.4s;
+}
+
+@keyframes rotateIn {
+    from {
+        rotate: 0;
+    }
+
+    20% {
+        rotate: 90deg;
+
+    }
+
+    40% {
+        rotate: 180deg;
+
+    }
+
+    60% {
+        rotate: 270deg;
+
+    }
+
+    80% {
+        rotate: 360deg;
+    }
+
+    85% {
+        rotate: 365deg;
+    }
+
+    90% {
+        rotate: 355deg;
+    }
+
+    95% {
+        rotate: 365deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes fade {
+    90% {
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}

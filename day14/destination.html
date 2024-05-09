@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mumbai</title>
 
     <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -14,15 +14,22 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./assets/css/grid.css">
-    <!-- <link rel="stylesheet" href="./assets/css/base.css"> -->
-    <link rel="stylesheet" href="./assets/css/base-responsive.css">
     <link rel="stylesheet" href="./assets/css/destination-style.css">
     <link rel="stylesheet" href="./assets/css/destination-transition.css">
+    <link rel="stylesheet" href="./assets/css/destination-responsive.css">
 
 </head>
 
 <body>
     <input type="checkbox" id="checkbox-dark-mode" hidden>
+    <div class="loading-indicator">
+        <div class="loading-content">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <main>
         <header class="secion-header">
             <div class="container">
@@ -38,12 +45,11 @@
                         <div class="container">
                             <ul class="nav-list">
                                 <li class="nav-item"><a class="nav-link" href="#">Trang Chủ</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Đặt Lịch</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Ưu Đãi</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Dịch Vụ</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Thư Viện</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Đánh Giá</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Liên Hệ</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#destination">Điểm Đến</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#service">Dịch Vụ</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#gallery">Ảnh</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#blog">Blogs</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -56,11 +62,11 @@
                     <nav class="nav-bar">
                         <ul class="nav-list">
                             <li class="nav-item"><a class="nav-link" href="#">Trang Chủ</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Điểm Đến</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Dịch Vụ</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Ảnh</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#destination">Điểm Đến</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#service">Dịch Vụ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#gallery">Ảnh</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#blog">Blogs</a></li>
                         </ul>
                     </nav>
 
@@ -82,55 +88,56 @@
             <div class="background-wrapper">
                 <img src="./assets/img/mumei-bg.jpg" alt="Mumbai Bg" title="Mumbai">
             </div>
-            <div class="home-content  ">
+            <div class="home-content">
                 <h2 class="home-title-name animate__animated  animate__fadeInUp">Mumbai</h2>
                 <h3 class="home-title-desc animate__animated  animate__fadeInUp">Thành Phố Có Tất Cả</h3>
                 <p class="home-desc animate__animated  animate__fadeInUp">Mumbai Không Chỉ Là Trung Tâm Tài Chính – Kinh
-                    Tế,
-                    Kinh Đô Điện Ảnh – Thời Trang Của Ấn
-                    Độ, Mà Đây Còn Là Thành Phố Cảng Vừa Hiện Đại Nhưng Vẫn Mang Nhiều Nét Cổ Kính Với Những Công Trình
-                    Kiến
-                    Trúc, Quán Bar, Nhà Hàng, Viện Bảo Tàng Và Các Cửa Hàng Thời Trang Hấp Dẫn…</p>
+                    Tế, Kinh Đô Điện Ảnh – Thời Trang Của Ấn Độ, Mà Đây Còn Là Thành Phố Cảng Vừa Hiện Đại Nhưng Vẫn
+                    Mang Nhiều Nét Cổ Kính Với Những Công Trình Kiến Trúc, Quán Bar, Nhà Hàng, Viện Bảo Tàng Và Các Cửa
+                    Hàng Thời Trang Hấp Dẫn…
+                </p>
                 <button class="btn animate__animated  animate__fadeInUp">Tìm Hiểu Thêm</button>
             </div>
         </section>
 
-        <section class="section-order">
+        <section class="section-order" id="order">
             <div class="row gy-0 f-center">
-                <div class="col-6">
+                <div class="col-lg-6 col-xs-12">
                     <h2 class="order-title wow animate__animated animate__zoomIn">Ưu Đãi 30.000.000
                         Cho
                         5người/3ngày</h2>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6 col-xs-12">
                     <button class="btn btn--light wow animate__animated animate__zoomIn">Đặt
                         Ngay</button>
                 </div>
             </div>
         </section>
 
-        <section class="section section-about">
+        <section class="section section-about" id="about">
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-sm-12 col-xs-12">
                         <input type="radio" name="radio-background" id="radio-video-1" hidden checked>
                         <input type="radio" name="radio-background" id="radio-video-2" hidden>
                         <input type="radio" name="radio-background" id="radio-video-3" hidden>
-                        <div class="about-video-wrapper wow animate__animated animate__fadeInLeft"
-                            data-wow-offset="130">
-                            <img class="about-video" src="./assets/img/home-img.png" alt="">
-                            <img class="about-video" src="./assets/img/home-img-2.png" alt="">
-                            <img class="about-video" src="./assets/img/home-img-3.png" alt="">
+                        <div class="about-video-wrapper wow animate__animated animate__fadeInLeft">
+                            <video src="https://stravelhtml.vercel.app/videos/vid-1.mp4" class="about-video"
+                                autoplay></video>
+                            <video src="https://stravelhtml.vercel.app/videos/vid-2.mp4" class="about-video"
+                                autoplay></video>
+                            <video src="https://stravelhtml.vercel.app/videos/vid-3.mp4" class="about-video"
+                                autoplay></video>
                         </div>
 
-                        <div class="about-actions wow animate__animated animate__fadeInLeft" data-wow-offset="130">
+                        <div class="about-actions wow animate__animated animate__fadeInLeft">
                             <div class="about-action-item"><label for="radio-video-1"></label></div>
                             <div class="about-action-item"><label for="radio-video-2"></label></div>
                             <div class="about-action-item"><label for="radio-video-3"></label></div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="about-content wow animate__animated animate__fadeInRight " data-wow-offset="130">
+                    <div class="col-lg-6 col-sm-12 col-xs-12">
+                        <div class="about-content wow animate__animated animate__fadeInRight ">
                             <h3 class="section-sub-title">Tại Sao Nên Chọn Stravel</h3>
                             <h2 class="section-main-title">Trải Nghiệm Bậc Nhất</h2>
                             <p class="about-desc">Chúng Tôi Hợp Tác Với Những Địa Điểm Nghỉ Dưỡng Có Trải Nghiệm Bậc
@@ -144,7 +151,7 @@
             </div>
         </section>
 
-        <section class="section section-destination">
+        <section class="section section-destination" id="destination">
             <div class="container">
                 <h3 class="section-sub-title">Những Điểm Đến Ở Mumbai</h3>
                 <h2 class="section-main-title">Những Điểm Du Lịch Bậc Nhất</h2>
@@ -152,7 +159,7 @@
 
                 <div class="destination-list">
                     <div class="row gx-4 gy-4">
-                        <div class="col-3 ">
+                        <div class="col-lg-3 col-sm-6 col-xs-12 ">
                             <article class="box-item wow animate__fadeInUp animate__animated" data-wow-delay="0.1s">
                                 <div class="box-img-wrapper">
                                     <img src="./assets/img/des-1.jpg" alt="DEstination-1" title="Ấn Độ Môn">
@@ -172,10 +179,10 @@
                             </article>
                         </div>
 
-                        <div class="col-3 ">
+                        <div class="col-lg-3 col-sm-6 col-xs-12">
                             <article class="box-item wow animate__fadeInUp animate__animated" data-wow-delay="0.15s">
                                 <div class="box-img-wrapper">
-                                    <img src="./assets/img/des-2.jpg" alt="DEstination-1" title="Ấn Độ Môn">
+                                    <img src="./assets/img/des-2.jpg" alt="DEstination-1" title="Tòa Nhà Hình Trứng">
                                 </div>
                                 <div class="box-content">
                                     <h4 class="box-title">
@@ -192,10 +199,11 @@
                             </article>
                         </div>
 
-                        <div class="col-3 ">
+                        <div class="col-lg-3 col-sm-6 col-xs-12">
                             <article class="box-item wow animate__fadeInUp animate__animated " data-wow-delay="0.2s">
                                 <div class="box-img-wrapper">
-                                    <img src="./assets/img/des-3.jpg" alt="DEstination-1" title="Ấn Độ Môn">
+                                    <img src="./assets/img/des-3.jpg" alt="DEstination-3"
+                                        title="Vườn Quốc Gia Sanjay Gandhi">
                                 </div>
                                 <div class="box-content">
                                     <h4 class="box-title" title="Vườn Quốc Gia Sanjay Gandhi">
@@ -213,10 +221,11 @@
                             </article>
                         </div>
 
-                        <div class="col-3 ">
+                        <div class="col-lg-3 col-sm-6 col-xs-12">
                             <article class="box-item wow animate__fadeInUp animate__animated" data-wow-delay="0.25s">
                                 <div class="box-img-wrapper">
-                                    <img src="./assets/img/des-4.jpg" alt="DEstination-1" title="Ấn Độ Môn">
+                                    <img src="./assets/img/des-4.jpg" alt="DEstination-4"
+                                        title="Trung Tâm Triễn Lãm Jehanggir">
                                 </div>
                                 <div class="box-content">
                                     <h4 class="box-title" title="Trung Tâm Triễn Lãm Jehanggir">
@@ -232,10 +241,10 @@
                             </article>
                         </div>
 
-                        <div class="col-3 ">
+                        <div class="col-lg-3 col-sm-6 col-xs-12">
                             <article class="box-item wow animate__fadeInUp animate__animated" data-wow-delay="0.3s">
                                 <div class="box-img-wrapper">
-                                    <img src="./assets/img/des-5.jpg" alt="DEstination-1" title="Ấn Độ Môn">
+                                    <img src="./assets/img/des-5.jpg" alt="DEstination-5" title="Hang Động Elephanta">
                                 </div>
                                 <div class="box-content">
                                     <h4 class="box-title">
@@ -253,10 +262,10 @@
                             </article>
                         </div>
 
-                        <div class="col-3 ">
+                        <div class="col-lg-3 col-sm-6 col-xs-12">
                             <article class="box-item wow animate__fadeInUp animate__animated" data-wow-delay="0.35s">
                                 <div class="box-img-wrapper">
-                                    <img src="./assets/img/des-6.jpg" alt="DEstination-1" title="Ấn Độ Môn">
+                                    <img src="./assets/img/des-6.jpg" alt="DEstination-1" title="Lonavala Và Khandala">
                                 </div>
                                 <div class="box-content">
                                     <h4 class="box-title">
@@ -272,10 +281,10 @@
                             </article>
                         </div>
 
-                        <div class="col-3 ">
+                        <div class="col-lg-3 col-sm-6 col-xs-12">
                             <article class="box-item wow animate__fadeInUp animate__animated" data-wow-delay="0.4s">
                                 <div class="box-img-wrapper">
-                                    <img src="./assets/img/des-7.jpg" alt="DEstination-1" title="Ấn Độ Môn">
+                                    <img src="./assets/img/des-7.jpg" alt="DEstination-6" title="Thành Phố Pune">
                                 </div>
                                 <div class="box-content">
                                     <h4 class="box-title">
@@ -293,7 +302,7 @@
                             </article>
                         </div>
 
-                        <div class="col-3 ">
+                        <div class="col-lg-3 col-sm-6 col-xs-12">
                             <article class="box-item wow animate__fadeInUp animate__animated" data-wow-delay="0.45s">
                                 <div class="box-img-wrapper">
                                     <img src="./assets/img/des-8.jpg" alt="DEstination-1" title="Ấn Độ Môn">
@@ -319,76 +328,79 @@
         </section>
 
 
-        <section class="section section-service">
+        <section class="section section-service" id="service">
             <div class="container">
                 <h3 class="section-sub-title">Dịch Vụ</h3>
                 <h2 class="section-main-title">Nâng Cao Trải Nghiệm</h2>
 
                 <div class="service-list">
                     <div class="row row gx-4 gy-4">
-                        <div class="col-4">
-                            <article class="service-item wow animate__animated animate__zoomIn" data-wow-delay="0.5s">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
+                            <article class="box-simple-item wow animate__animated animate__zoomIn"
+                                data-wow-delay="0.5s">
                                 <div class="service-icon-wrapper">
                                     <i class="service-icon fas fa-globe"></i>
                                 </div>
 
-                                <h4 class="serivce-title">Rộng Khắp Thế Giới</h4>
-                                <p class="service-desc">Some Text...</p>
+                                <h4 class="box-simple-title">Rộng Khắp Thế Giới</h4>
+                                <p class="box-simple-desc">Some Text...</p>
                             </article>
                         </div>
 
-                        <div class="col-4">
-                            <article class="service-item wow animate__animated animate__zoomIn" data-wow-delay="0.5s">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
+                            <article class="box-simple-item wow animate__animated animate__zoomIn"
+                                data-wow-delay="0.5s">
                                 <div class="service-icon-wrapper">
                                     <i class="service-icon fas fa-hiking"></i>
                                 </div>
 
-                                <h4 class="serivce-title">Những Cuộc Phiêu Lưu </h4>
-                                <p class="service-desc">Some Text...</p>
+                                <h4 class="box-simple-title">Những Cuộc Phiêu Lưu </h4>
+                                <p class="box-simple-desc">Some Text...</p>
                             </article>
                         </div>
 
-                        <div class="col-4">
-                            <article class="service-item wow animate__animated animate__zoomIn" data-wow-delay="0.5s">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
+                            <article class="box-simple-item wow animate__animated animate__zoomIn"
+                                data-wow-delay="0.5s">
                                 <div class="service-icon-wrapper">
                                     <i class="service-icon fas fa-utensils"></i>
                                 </div>
 
-                                <h4 class="serivce-title">Dịch Vụ Ăn Uống </h4>
-                                <p class="service-desc">Some Text...</p>
+                                <h4 class="box-simple-title">Dịch Vụ Ăn Uống </h4>
+                                <p class="box-simple-desc">Some Text...</p>
                             </article>
                         </div>
 
-                        <div class="col-4">
-                            <article class="service-item wow animate__animated animate__zoomIn" data-wow-delay="1s">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
+                            <article class="box-simple-item wow animate__animated animate__zoomIn" data-wow-delay="1s">
                                 <div class="service-icon-wrapper">
                                     <i class="service-icon fas fa-hotel"></i>
                                 </div>
 
-                                <h4 class="serivce-title">Nghỉ Dưỡng Cao Cấp </h4>
-                                <p class="service-desc">Some Text...</p>
+                                <h4 class="box-simple-title">Nghỉ Dưỡng Cao Cấp </h4>
+                                <p class="box-simple-desc">Some Text...</p>
                             </article>
                         </div>
 
-                        <div class="col-4">
-                            <article class="service-item wow animate__animated animate__zoomIn" data-wow-delay="1s">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
+                            <article class="box-simple-item wow animate__animated animate__zoomIn" data-wow-delay="1s">
                                 <div class="service-icon-wrapper">
                                     <i class="service-icon fas fa-wallet"></i>
                                 </div>
 
-                                <h4 class="serivce-title">Giá Tốt Nhất </h4>
-                                <p class="service-desc">Some Text...</p>
+                                <h4 class="box-simple-title">Giá Tốt Nhất </h4>
+                                <p class="box-simple-desc">Some Text...</p>
                             </article>
                         </div>
 
-                        <div class="col-4">
-                            <article class="service-item wow animate__animated animate__zoomIn" data-wow-delay="1s">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
+                            <article class="box-simple-item wow animate__animated animate__zoomIn" data-wow-delay="1s">
                                 <div class="service-icon-wrapper">
                                     <i class="service-icon fas fa-headset"></i>
                                 </div>
 
-                                <h4 class="serivce-title">Hỗ Trợ 24/7 </h4>
-                                <p class="service-desc">Some Text...</p>
+                                <h4 class="box-simple-title">Hỗ Trợ 24/7 </h4>
+                                <p class="box-simple-desc">Some Text...</p>
                             </article>
                         </div>
                     </div>
@@ -397,95 +409,103 @@
         </section>
 
 
-        <section class="section section-gallery">
+        <section class="section section-gallery" id="gallery">
             <div class="container">
                 <h2 class="section-single-title">Những Bức Ảnh Về Mumbai </h2>
 
                 <div class="garllery-list">
                     <div class="row gx-4 gy-4">
-                        <div class="col-4">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
                             <article class="gallery-item wow animate__animated animate__zoomIn" data-wow-delay="0.5s">
                                 <div class="gallery-img-wrapper">
-                                    <img src="./assets/img/gallery-img-1.jpg" alt="">
+                                    <img src="./assets/img/gallery-img-1.jpg" alt="gallery-1" title="Thành Phố Mumbai">
                                 </div>
                                 <p class="gallery-desc">Thành Phố Mumbai</p>
                                 <h4 class="gallery-title">Vườn Quốc Gia Sanjay Gandhi </h4>
                             </article>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
                             <article class="gallery-item wow animate__animated animate__zoomIn" data-wow-delay="0.5s">
                                 <div class="gallery-img-wrapper">
-                                    <img src="./assets/img/gallery-img-2.jpg" alt="">
+                                    <img src="./assets/img/gallery-img-2.jpg" alt="gallery-2"
+                                        title="Nhà Thờ St John The Evangelist">
                                 </div>
                                 <h4 class="gallery-title">Nhà Thờ St John The Evangelist</h4>
                             </article>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
                             <article class="gallery-item wow animate__animated animate__zoomIn" data-wow-delay="0.5s">
                                 <div class="gallery-img-wrapper">
-                                    <img src="./assets/img/gallery-img-3.jpg" alt="">
+                                    <img src="./assets/img/gallery-img-3.jpg" alt="gallery-3"
+                                        title="Nằm Trên Đỉnh Ngọn Đồi Malabar Ở Mumbai">
                                 </div>
                                 <p class="gallery-desc">Nằm Trên Đỉnh Ngọn Đồi Malabar Ở Mumbai</p>
                                 <h4 class="gallery-title">Vườn Treo Mumbai</h4>
                             </article>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
                             <article class="gallery-item wow animate__animated animate__zoomIn" data-wow-delay="0.75s">
                                 <div class="gallery-img-wrapper">
-                                    <img src="./assets/img/gallery-img-4.jpg" alt="">
+                                    <img src="./assets/img/gallery-img-4.jpg" alt="gallery-4"
+                                        title="Bảo Tàng Viện Của Thành Phố Mumbai">
                                 </div>
                                 <p class="gallery-desc">Bảo Tàng Viện Của Thành Phố Mumbai</p>
                                 <h4 class="gallery-title">Dr. Bhau Daji Lad</h4>
                             </article>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
                             <article class="gallery-item wow animate__animated animate__zoomIn" data-wow-delay="0.75s">
                                 <div class="gallery-img-wrapper">
-                                    <img src="./assets/img/gallery-img-5.jpg" alt="">
+                                    <img src="./assets/img/gallery-img-5.jpg" alt="gallery-5"
+                                        title="Tòa Đô Chánh Mumbai">
                                 </div>
                                 <p class="gallery-desc">Di Sản Thế Giới Được UNESCO Nhìn Nhận</p>
                                 <h4 class="gallery-title">Tòa Đô Chánh Mumbai</h4>
                             </article>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
                             <article class="gallery-item wow animate__animated animate__zoomIn" data-wow-delay="0.75s">
                                 <div class="gallery-img-wrapper">
-                                    <img src="./assets/img/gallery-img-6.jpg" alt="">
+                                    <img src="./assets/img/gallery-img-6.jpg" alt="gallery-6"
+                                        title="Kiến Trúc Thời Victoria">
                                 </div>
                                 <p class="gallery-desc">Mumbai</p>
                                 <h4 class="gallery-title">Kiến Trúc Thời Victoria</h4>
                             </article>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
                             <article class="gallery-item wow animate__animated animate__zoomIn" data-wow-delay="1s">
                                 <div class="gallery-img-wrapper">
-                                    <img src="./assets/img/gallery-img-7.jpg" alt="">
+                                    <img src="./assets/img/gallery-img-7.jpg" alt="gallery-7"
+                                        title="Khách Sạn Taj Mahal">
                                 </div>
                                 <p class="gallery-desc">Khách Sạn 5 Sao Ở Mumbai</p>
                                 <h4 class="gallery-title">Khách Sạn Taj Mahal</h4>
                             </article>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
                             <article class="gallery-item wow animate__animated animate__zoomIn" data-wow-delay="1s">
                                 <div class="gallery-img-wrapper">
-                                    <img src="./assets/img/gallery-img-8.jpg" alt="">
+                                    <img src="./assets/img/gallery-img-8.jpg" alt="gallery-8"
+                                        title="Hang Động Elephanta">
                                 </div>
                                 <p class="gallery-desc">Phía Đông Thành Phố Mumbai</p>
                                 <h4 class="gallery-title">Hang Động Elephanta</h4>
                             </article>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
                             <article class="gallery-item wow animate__animated animate__zoomIn" data-wow-delay="1s">
                                 <div class="gallery-img-wrapper">
-                                    <img src="./assets/img/gallery-img-6.jpg" alt="">
+                                    <img src="./assets/img/gallery-img-9.jpg" alt="gallery-9"
+                                        title="Phiên Chợ Địa Phương">
                                 </div>
                                 <p class="gallery-desc">Mumbai</p>
                                 <h4 class="gallery-title">Phiên Chợ Địa Phương</h4>
@@ -496,10 +516,10 @@
             </div>
         </section>
 
-        <section class="section section-review">
+        <section class="section section-review" id="review">
             <div class="container">
                 <div class="row gx-5 gy-5">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-sm-12 col-xs-12">
                         <div class="review-heading wow animate__animated animate__fadeInLeft">
                             <h2 class="section-single-title">Những Lời Đánh Giá Tốt Nhất </h2>
                             <p class="review-desc">Tất Cả Những Lời Đánh Giá Chúng Tôi Đều Ghi Nhận Và Tiếp Thu Để Phát
@@ -508,18 +528,20 @@
                         </div>
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-lg-6 col-sm-12 col-xs-12">
                         <div class="review-list wow animate__animated animate__fadeInRight">
                             <div class="row gx-4 gy-4">
-                                <div class="col-6">
-                                    <blockquote class="review-item">
-                                        <div class="review-text">Chuyến Đi Rất Vui, Giá Rất Rẻ. Gọi Tư Vấn Rất Nhanh.
+                                <div class="col-lg-6 col-sm-4 col-xs-12">
+                                    <blockquote class="box-simple-item">
+                                        <div class="box-simple-desc">Chuyến Đi Rất Vui, Giá Rất Rẻ. Gọi Tư Vấn Rất
+                                            Nhanh.
                                             Tôi Sẽ
                                             Quay Lại Đay Môt Lần Nữa
                                         </div>
                                         <div class="review-author">
                                             <div class="author-avatar-wrapper">
-                                                <img src="./assets/img/pic-1.png" alt="Author-1 Avatar">
+                                                <img src="./assets/img/pic-1.png" alt="Author-1 Avatar"
+                                                    title="Duong Nguyen">
                                             </div>
 
                                             <div class="author-detail">
@@ -530,15 +552,17 @@
                                         </div>
                                     </blockquote>
                                 </div>
-                                <div class="col-6">
-                                    <blockquote class="review-item">
-                                        <div class="review-text">Chuyến Đi Rất Vui, Đáng Để Thử. Đồ Ăn Ở Đây Rất Ngon.
+                                <div class="col-lg-6 col-sm-4 col-xs-12">
+                                    <blockquote class="box-simple-item">
+                                        <div class="box-simple-desc">Chuyến Đi Rất Vui, Đáng Để Thử. Đồ Ăn Ở Đây Rất
+                                            Ngon.
                                             Chắc
                                             Chắn Sẽ Quay Lại Vì Đồ Ăn Hihi
                                         </div>
                                         <div class="review-author">
                                             <div class="author-avatar-wrapper">
-                                                <img src="./assets/img/pic-2.png" alt="Author-1 Avatar">
+                                                <img src="./assets/img/pic-2.png" alt="Author-1 Avatar"
+                                                    title="Some People">
                                             </div>
 
                                             <div class="author-detail">
@@ -549,15 +573,17 @@
                                         </div>
                                     </blockquote>
                                 </div>
-                                <div class="col-6">
-                                    <blockquote class="review-item">
-                                        <div class="review-text">Chuyến Đi Rất Vui, Giá Rất Rẻ. Gọi Tư Vấn Rất Nhanh.
+                                <div class="col-lg-6 col-sm-4 col-xs-12">
+                                    <blockquote class="box-simple-item">
+                                        <div class="box-simple-desc">Chuyến Đi Rất Vui, Giá Rất Rẻ. Gọi Tư Vấn Rất
+                                            Nhanh.
                                             Tôi Sẽ
                                             Quay Lại Đay Môt Lần Nữa
                                         </div>
                                         <div class="review-author">
                                             <div class="author-avatar-wrapper">
-                                                <img src="./assets/img/pic-3.png" alt="Author-1 Avatar">
+                                                <img src="./assets/img/pic-3.png" alt="Author-1 Avatar"
+                                                    title="Some People">
                                             </div>
 
                                             <div class="author-detail">
@@ -568,15 +594,17 @@
                                         </div>
                                     </blockquote>
                                 </div>
-                                <div class="col-6">
-                                    <blockquote class="review-item">
-                                        <div class="review-text">Chuyến Đi Rất Vui, Giá Rất Rẻ. Gọi Tư Vấn Rất Nhanh.
+                                <div class="col-lg-6 col-sm-4 col-sm-full col-xs-12">
+                                    <blockquote class="box-simple-item">
+                                        <div class="box-simple-desc">Chuyến Đi Rất Vui, Giá Rất Rẻ. Gọi Tư Vấn Rất
+                                            Nhanh.
                                             Tôi Sẽ
                                             Quay Lại Đay Môt Lần Nữa
                                         </div>
                                         <div class="review-author">
                                             <div class="author-avatar-wrapper">
-                                                <img src="./assets/img/pic-4.png" alt="Author-1 Avatar">
+                                                <img src="./assets/img/pic-4.png" alt="Author-1 Avatar"
+                                                    title="Some People">
                                             </div>
 
                                             <div class="author-detail">
@@ -595,12 +623,12 @@
 
         </section>
 
-        <section class="section section-contact">
+        <section class="section section-contact" id="contact">
             <div class="container">
                 <h2 class="section-single-title">LIÊN LẠC</h2>
 
                 <div class="row ">
-                    <div class="col-45">
+                    <div class="col-45 col-sm-12 col-xs-12">
                         <div class="map-wrapper wow animate__animated animate__fadeInLeft">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29793.988211049866!2d105.8369637!3d21.022739599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9bd9861ca1%3A0xe7887f7b72ca17a9!2zSMOgIE7hu5lp!5e0!3m2!1svi!2s!4v1715182603637!5m2!1svi!2s"
@@ -608,25 +636,25 @@
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
-                    <div class="col-55">
+                    <div class="col-55 col-sm-12 col-xs-12">
                         <form class="contact-form wow animate__animated animate__fadeInRight" action="#" method="POST">
 
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <input class="form-input" type="text" name="name" placeholder="Tên của bạn">
                                 </div>
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <input class="form-input" type="email" name="email" placeholder="Email liên hệ">
                                 </div>
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <input class="form-input" type="number" name="phoneNumber"
                                         placeholder="Số điện thoại">
                                 </div>
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <input class="form-input" type="text" name="email" placeholder="Chủ đề">
                                 </div>
 
-                                <div class="col-12">
+                                <div class="col-lg-12">
                                     <textarea class="form-input" name="review"
                                         placeholder="Viết đánh giá của bạn về chuyến đi"></textarea>
                                 </div>
@@ -639,17 +667,17 @@
             </div>
         </section>
 
-        <section class="section section-blog">
+        <section class="section section-blog" id="blog">
             <div class="container">
                 <h3 class="section-sub-title">Blogs & Posts </h3>
                 <h2 class="section-main-title">Tìm Hiểu Thêm Về Mumbai </h2>
 
                 <div class="blog-list">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
                             <article class="box-item wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
                                 <div class="box-img-wrapper">
-                                    <img src="./assets/img/blog-1.jpg" alt="Blog-1">
+                                    <img src="./assets/img/blog-1.jpg" alt="Blog-1" title="Mang Những Gì Khi Đi Mumbai">
                                 </div>
 
                                 <div class="box-content">
@@ -680,10 +708,10 @@
 
                             </article>
                         </div>
-                        <div class="col-4">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
                             <article class="box-item wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
                                 <div class="box-img-wrapper">
-                                    <img src="./assets/img/blog-2.jpg" alt="Blog-1">
+                                    <img src="./assets/img/blog-2.jpg" alt="Blog-2" title="Xin Visa Đi Mumbai">
                                 </div>
 
                                 <div class="box-content">
@@ -712,10 +740,10 @@
                             </article>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
                             <article class="box-item wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
                                 <div class="box-img-wrapper">
-                                    <img src="./assets/img/blog-1.jpg" alt="Blog-1">
+                                    <img src="./assets/img/blog-1.jpg" alt="Blog-3" title="Phương Tiện Di Chuyển">
                                 </div>
 
                                 <div class="box-content">
@@ -749,7 +777,7 @@
             </div>
         </section>
 
-        <section class="section section-banner">
+        <section class="section section-banner" id="banner">
             <div class="section-content wow animate__animated animate__zoomIn">
                 <h3 class="section-sub-title">Blogs & Posts </h3>
                 <h2 class="section-main-title">Tìm Hiểu Thêm Về Mumbai </h2>
@@ -764,10 +792,10 @@
             </div>
         </section>
 
-        <footer class="section section-footer">
+        <footer class="section section-footer" id="footer">
             <div class="container">
                 <div class="row gx-4 gy-4">
-                    <div class="col-3">
+                    <div class="col-lg-3 col-sm-4 col-xs-12">
                         <article class="footer-about wow animate__animated animate__fadeInUp">
                             <h2 class="footer-about-logo">
                                 <a href="./"> <span class="hightlight">S</span>TRAVEL</a>
@@ -786,7 +814,7 @@
                             </div>
                         </article>
                     </div>
-                    <div class="col-3">
+                    <div class="col-lg-3 col-sm-4 col-xs-12">
                         <article class="footer-item wow animate__animated animate__fadeInUp">
                             <h3 class="footer-title">Chuyển Hướng Nhanh </h3>
 
@@ -795,24 +823,24 @@
                                     <a href="#"><i class="fas fa-arrow-right"></i>Trang chủ</a>
                                 </li>
                                 <li class="footer-list-item">
-                                    <a href="#"><i class="fas fa-arrow-right"></i>About</a>
+                                    <a href="#about"><i class="fas fa-arrow-right"></i>About</a>
                                 </li>
                                 <li class="footer-list-item">
-                                    <a href="#"><i class="fas fa-arrow-right"></i>Điểm Đến</a>
+                                    <a href="#destination"><i class="fas fa-arrow-right"></i>Điểm Đến</a>
                                 </li>
                                 <li class="footer-list-item">
-                                    <a href="#"><i class="fas fa-arrow-right"></i>Dịch Vụ</a>
+                                    <a href="#service"><i class="fas fa-arrow-right"></i>Dịch Vụ</a>
                                 </li>
                                 <li class="footer-list-item">
-                                    <a href="#"><i class="fas fa-arrow-right"></i>Ảnh</a>
+                                    <a href="#gallery"><i class="fas fa-arrow-right"></i>Ảnh</a>
                                 </li>
                                 <li class="footer-list-item">
-                                    <a href="#"><i class="fas fa-arrow-right"></i>Blogs</a>
+                                    <a href="#blog"><i class="fas fa-arrow-right"></i>Blogs</a>
                                 </li>
                             </ul>
                         </article>
                     </div>
-                    <div class="col-3">
+                    <div class="col-lg-3 col-sm-4 col-xs-12">
                         <article class="footer-item footer-contact wow animate__animated animate__fadeInUp">
                             <h3 class="footer-title">Liên Hệ </h3>
                             <ul class="footer-list">
@@ -831,7 +859,7 @@
                             </ul>
                         </article>
                     </div>
-                    <div class="col-3">
+                    <div class="col-lg-3 col-sm-4 col-xs-12">
                         <article class="footer-item footer-news wow animate__animated animate__fadeInUp">
                             <h3 class="footer-title">Tin Tức Mới</h3>
                             <p class="footer-about-desc">
