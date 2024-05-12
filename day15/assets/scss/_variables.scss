@@ -1,0 +1,13 @@
+$text-color: #000;
+$black: black;
+
+$padding-block-header-nav-link: 7px;
+$header-padding-top: 48px - $padding-block-header-nav-link;
+$header-padding-bottom: 69px - $padding-block-header-nav-link;
+
+$padding-aside: 53px 0 62px 58px;
+
+$aside-nav-gap: 29px;
+$aside-nav-link-padding-block: 5px;
+$aside-nav-link-padding-inline: 10px;
+$aside-nav-gap: $aside-nav-gap - $aside-nav-link-padding-block * 2;
