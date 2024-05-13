@@ -1,0 +1,15 @@
+@use "sass:map";
+$media-screens: (
+    desktop: '(min-width:1500px)' ,
+    laptop: '(min-width:1200px)',
+    extralTablet: '(max-width:992px)',
+    tablet: '(max-width:768px)',
+    extralMobile: '(max-width:576px)',
+    mobile: '(max-width:576px)'
+);
+
+@mixin media-screen($deivice) {
+    @media screen and #{map.get($media-screens,$deivice)} {
+        @content
+    }   
+}

@@ -1,13 +1,24 @@
 $text-color: #000;
 $black: black;
 
+$app-inner-padding-right:54.5px;
+$app-inner-padding-bottom:67px;
+
 $padding-block-header-nav-link: 7px;
 $header-padding-top: 48px - $padding-block-header-nav-link;
 $header-padding-bottom: 69px - $padding-block-header-nav-link;
 
-$padding-aside: 53px 0 62px 58px;
+$padding-aside-top: 53px;
+$padding-aside-right:0;
+$padding-aside-botom:62px;
+$padding-aside-left:58px;
+$padding-aside: $padding-aside-top  $padding-aside-right $padding-aside-botom $padding-aside-left;
 
 $aside-nav-gap: 29px;
 $aside-nav-link-padding-block: 5px;
 $aside-nav-link-padding-inline: 10px;
 $aside-nav-gap: $aside-nav-gap - $aside-nav-link-padding-block * 2;
+
+
+$btn-chat-wrapper-position-bottom: 40px;
+$btn-open-aside-position-bottom: 80px;

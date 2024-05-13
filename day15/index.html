@@ -11,9 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
         rel="stylesheet">
-
     <!-- Embeded Favicon -->
     <link rel="shortcut icon" href="./assets/favicon_io/favicon.ico" type="image/x-icon">
+    <!-- Font aweasome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -22,11 +25,34 @@
     <div class="app">
         <div class="app-inner">
             <header class="header-section">
+                <input type="checkbox" id="input-aside" hidden>
+                <input type="checkbox" id="input-form" hidden>
+
+
+                <button class="open-aside-btn">
+                    <label for="input-aside">
+                        <i class="fa-solid fa-filter"></i>
+                    </label>
+                </button>
+
+                <button class="open-form-mobile">
+                    <label for="input-form">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                </button>
+
+
                 <form class="header-form" action="#" method="GET">
                     <label class="form-icon" for="search">
                         <img id src="./assets/icons/search.svg" alt="Search-icon" title="search for Product">
                     </label>
                     <input class="form-input" type="text" name="search" id="search" placeholder="Search store">
+
+                    <button type="reset" class="close-form-mobile">
+                        <label for="input-form">
+                            <i class="fa-solid fa-xmark"></i>
+                        </label>
+                    </button>
                 </form>
 
                 <nav class="header-nav">
@@ -47,7 +73,13 @@
                     </div>
                 </div>
             </header>
+
             <aside class="aside-section">
+                <button class="cancel-btn-aside">
+                    <label for="input-aside">
+                        <i class="fa-solid fa-xmark"></i>
+                    </label>
+                </button>
                 <div class="aside-logo">
                     <a class="logo-link" title="Go Home page" href="#">
                         <img class="logo" src="./assets/imgs/logo.svg" alt="Logo img">
@@ -98,13 +130,7 @@
                     </ul>
                 </nav>
 
-                <div class="aside-chat">
-                    <button class="chat-btn" id="chat-btn">
-                        <img src="./assets/icons/chat.svg" alt="Chat-icon">
-                    </button>
 
-                    <label for="chat-btn" class="chat-label">Help Center</label>
-                </div>
             </aside>
             <main class="main-section">
                 <div class="main-item wide">
@@ -128,6 +154,7 @@
                         </div>
                     </a>
                 </div>
+
                 <div class="main-item wide">
                     <a href="#">
                         <img class="main-item-img" src="./assets/imgs/banner-2.jpg" alt="">
@@ -160,6 +187,15 @@
                     </a>
                 </div>
             </main>
+
+
+            <div class="chat-wrapper">
+                <button class="chat-btn" id="chat-btn">
+                    <label> <img src="./assets/icons/chat.svg" alt="Chat-icon"></label>
+                </button>
+
+                <label for="chat-btn" class="chat-label">Help Center</label>
+            </div>
         </div>
     </div>
 </body>
