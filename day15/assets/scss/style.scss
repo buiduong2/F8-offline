@@ -323,6 +323,14 @@ body {
         display: block;
     }
 
+    .open-form-mobile {
+        display: block;
+    }
+
+    .close-form-mobile {
+        display: block;
+    }
+
     #input-aside:checked ~ .aside-section {
         transform: translateX(100%);
     }

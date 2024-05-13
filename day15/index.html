@@ -24,11 +24,14 @@
 <body>
     <div class="app">
         <div class="app-inner">
+            <input type="checkbox" id="input-aside" hidden>
+
+            <!-- HEADER SECTION -->
             <header class="header-section">
-                <input type="checkbox" id="input-aside" hidden>
                 <input type="checkbox" id="input-form" hidden>
 
 
+                <!-- BTN FOR SMALL DEVICES -->
                 <button class="open-aside-btn">
                     <label for="input-aside">
                         <i class="fa-solid fa-filter"></i>
@@ -40,6 +43,7 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </label>
                 </button>
+                <!-- /BTN FOR SMALL DEVICES -->
 
 
                 <form class="header-form" action="#" method="GET">
@@ -73,7 +77,9 @@
                     </div>
                 </div>
             </header>
+            <!-- /HEADER SECTION -->
 
+            <!-- ASIDE SECTION -->
             <aside class="aside-section">
                 <button class="cancel-btn-aside">
                     <label for="input-aside">
@@ -132,6 +138,9 @@
 
 
             </aside>
+            <!-- /ASIDE SECTION -->
+
+            <!-- MAIN SECTION -->
             <main class="main-section">
                 <div class="main-item wide">
                     <a href="#">
@@ -187,8 +196,10 @@
                     </a>
                 </div>
             </main>
+            <!-- /MAIN SECTION -->
 
 
+            <!-- CHAT BTN -->
             <div class="chat-wrapper">
                 <button class="chat-btn" id="chat-btn">
                     <label> <img src="./assets/icons/chat.svg" alt="Chat-icon"></label>
@@ -196,6 +207,7 @@
 
                 <label for="chat-btn" class="chat-label">Help Center</label>
             </div>
+            <!-- /CHAT BTN -->
         </div>
     </div>
 </body>
