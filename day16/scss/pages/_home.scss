@@ -1,0 +1,91 @@
+@use "../layouts/header";
+
+@use "../partials/base";
+@use "../partials/variables" as var;
+
+body {
+    margin-bottom: 100px;
+}
+
+.hero-section {
+    display: flex;
+    margin-top: 109px;
+    height: calc(100vh - 109px);
+    .hero-content-inner {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: calc(100vh - 109px);
+
+        .container {
+            height: 100%;
+        }
+
+        .hero-detail {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #2c2c2c;
+
+            .sub-heading {
+                font-size: 3.6666rem;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 131.523%; /* 48.225px */
+                width: 90%;
+            }
+
+            .main-heading {
+                font-family: Inter;
+                font-size: 43.333px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+                width: 65%;
+            }
+
+            .hero-desc {
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 127.604%;
+                width: 75%;
+            }
+        }
+    }
+
+    .hero-banner {
+        margin-left: auto;
+        width: 48%;
+        background-color: #dcffca;
+        border-radius: 17px 0 0 17px;
+        position: relative;
+        height: 100%;
+        .banner-img-wrapper {
+            height: 100%;
+            translate: -25%;
+            img {
+                display: block;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .banner-heading {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            opacity: 0.15;
+            transform: rotate(90deg);
+            transform-origin: top left;
+            color: var(--Green-1000, #216000);
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-size: 166px;
+            font-weight: 800;
+            overflow: hidden;
+            padding-left: 10px;
+        }
+    }
+}

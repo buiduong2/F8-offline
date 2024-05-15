@@ -1,0 +1,346 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+}
+
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-section {
+  background: var(--White, #fff);
+  box-shadow: 0px 1.667px 8.333px 0px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.header-section .header-inner {
+  display: flex;
+  min-height: 108px;
+  align-items: center;
+}
+.header-section .header-inner .header-nav-action {
+  display: flex;
+  margin-left: auto;
+  align-self: flex-end;
+  gap: 50px;
+}
+.header-section .header-inner .header-nav-action .nav .nav-list {
+  display: flex;
+  gap: 50px;
+}
+.header-section .header-inner .header-nav-action .nav .nav-list .nav-item .nav-link {
+  display: block;
+  padding: 25px 0 35px 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 130%;
+  position: relative;
+}
+.header-section .header-inner .header-nav-action .nav .nav-list .nav-item .nav-link::before {
+  display: block;
+  content: "";
+  height: 1.6px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.header-section .header-inner .header-nav-action .nav .nav-list .nav-item .nav-link.active, .header-section .header-inner .header-nav-action .nav .nav-list .nav-item .nav-link:hover {
+  color: var(--green-800-main, #46b20f);
+}
+.header-section .header-inner .header-nav-action .nav .nav-list .nav-item .nav-link:hover::before {
+  background-color: var(--green-800-main, #46b20f);
+}
+.header-section .header-inner .header-nav-action .actions {
+  display: flex;
+  gap: 50px;
+}
+.header-section .header-inner .header-nav-action .actions .action-item {
+  display: block;
+  padding: 25px 0 35px 0;
+  position: relative;
+  cursor: pointer;
+}
+.header-section .header-inner .header-nav-action .actions .action-item::before {
+  display: block;
+  content: "";
+  height: 1.6px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.header-section .header-inner .header-nav-action .actions .action-item.active, .header-section .header-inner .header-nav-action .actions .action-item:hover {
+  color: var(--green-800-main, #46b20f);
+}
+.header-section .header-inner .header-nav-action .actions .action-item:hover svg use {
+  color: var(--green-800-main, #46b20f);
+  stroke: #46b20f;
+}
+.header-section .header-inner .header-nav-action .actions .action-item:hover::before {
+  background-color: var(--green-800-main, #46b20f);
+}
+.header-section .header-inner .header-nav-action .actions .action-cart .action-cart-inner {
+  position: relative;
+  display: block;
+}
+.header-section .header-inner .header-nav-action .actions .action-cart .action-cart-inner .quanitty {
+  width: 13.333px;
+  height: 13.333px;
+  background-color: var(--Orange-700, #e05000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--White, #fff);
+  position: absolute;
+  top: 0;
+  right: 0;
+  translate: 50% -50%;
+  border-radius: 50%;
+}
+
+body {
+  margin-bottom: 100px;
+}
+
+.hero-section {
+  display: flex;
+  margin-top: 109px;
+  height: calc(100vh - 109px);
+}
+.hero-section .hero-content-inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: calc(100vh - 109px);
+}
+.hero-section .hero-content-inner .container {
+  height: 100%;
+}
+.hero-section .hero-content-inner .hero-detail {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #2c2c2c;
+}
+.hero-section .hero-content-inner .hero-detail .sub-heading {
+  font-size: 3.6666rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 131.523%; /* 48.225px */
+  width: 90%;
+}
+.hero-section .hero-content-inner .hero-detail .main-heading {
+  font-family: Inter;
+  font-size: 43.333px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  width: 65%;
+}
+.hero-section .hero-content-inner .hero-detail .hero-desc {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 127.604%;
+  width: 75%;
+}
+.hero-section .hero-banner {
+  margin-left: auto;
+  width: 48%;
+  background-color: #dcffca;
+  border-radius: 17px 0 0 17px;
+  position: relative;
+  height: 100%;
+}
+.hero-section .hero-banner .banner-img-wrapper {
+  height: 100%;
+  translate: -25%;
+}
+.hero-section .hero-banner .banner-img-wrapper img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.hero-section .hero-banner .banner-heading {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  opacity: 0.15;
+  transform: rotate(90deg);
+  transform-origin: top left;
+  color: var(--Green-1000, #216000);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 166px;
+  font-weight: 800;
+  overflow: hidden;
+  padding-left: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

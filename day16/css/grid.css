@@ -1,0 +1,456 @@
+:root {
+    --max-column: 12;
+    --container-width: 1200px;
+    --column-space: 20px;
+    --row-space: 20px;
+    --spacer: 1rem;
+}
+
+
+.container {
+    max-width: 1250px;
+    margin-inline: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: calc(var(--column-space) * -1 / 2);
+    margin-top: calc(var(--row-space) * -1)
+}
+
+.row.gy-0 {
+    --row-space: 0;
+}
+
+.row.gx-0 {
+    --column-space: 0;
+}
+
+
+.row.gx-1 {
+    --column-space: calc(var(--spacer) * 0.25);
+}
+
+.row.gx-2 {
+    --column-space: calc(var(--spacer) * 0.5);
+}
+
+.row.gx-3 {
+    --column-space: calc(var(--spacer) * 1);
+}
+
+.row.gx-4 {
+    --column-space: calc(var(--spacer) * 1.5);
+}
+
+.row.gx-5 {
+    --column-space: calc(var(--spacer) * 3);
+}
+
+
+.row.gy-1 {
+    --row-space: calc(var(--spacer) * 0.25);
+}
+
+.row.gy-2 {
+    --row-space: calc(var(--spacer) * 0.5);
+}
+
+.row.gy-3 {
+    --row-space: calc(var(--spacer) * 1);
+}
+
+.row.gy-4 {
+    --row-space: calc(var(--spacer) * 1.5);
+}
+
+.row.gy-5 {
+    --row-space: calc(var(--spacer) * 3);
+}
+
+[class ^="col-"] {
+    flex-basis: calc(100% / var(--max-column) * var(--column-size));
+    max-width: calc(100% / var(--max-column) * var(--column-size));
+    padding-inline: calc(var(--column-space) /2);
+    padding-top: var(--row-space);
+}
+
+
+.col-1 {
+    --column-size: 1;
+}
+
+.col-2 {
+    --column-size: 2;
+}
+
+.col-3 {
+    --column-size: 3;
+}
+
+.col-4 {
+    --column-size: 4;
+}
+
+.col-5 {
+    --column-size: 5;
+}
+
+.col-6 {
+    --column-size: 6;
+}
+
+
+.col-7 {
+    --column-size: 7;
+}
+
+.col-8 {
+    --column-size: 8;
+}
+
+.col-9 {
+    --column-size: 9;
+}
+
+.col-10 {
+    --column-size: 10;
+}
+
+.col-11 {
+    --column-size: 11;
+}
+
+.col-12 {
+    --column-size: 12;
+}
+
+
+/* sm */
+@media screen and (max-width: 575.98px) {
+
+    .col-xs-1 {
+        --column-size: 1;
+    }
+
+    .col-xs-2 {
+        --column-size: 2;
+    }
+
+    .col-xs-3 {
+        --column-size: 3;
+    }
+
+    .col-xs-4 {
+        --column-size: 4;
+    }
+
+    .col-xs-5 {
+        --column-size: 5;
+    }
+
+    .col-xs-6 {
+        --column-size: 6;
+    }
+
+
+    .col-xs-7 {
+        --column-size: 7;
+    }
+
+    .col-xs-8 {
+        --column-size: 8;
+    }
+
+    .col-xs-9 {
+        --column-size: 9;
+    }
+
+    .col-xs-10 {
+        --column-size: 10;
+    }
+
+    .col-xs-11 {
+        --column-size: 11;
+    }
+
+    .col-xs-12 {
+        --column-size: 12;
+    }
+}
+
+/* sm */
+@media screen and (min-width: 576px) {
+
+    .col-sm-full {
+        flex-grow: 1;
+        max-width: none;
+    }
+
+    .col-sm-1 {
+        --column-size: 1;
+    }
+
+    .col-sm-2 {
+        --column-size: 2;
+    }
+
+    .col-sm-3 {
+        --column-size: 3;
+    }
+
+    .col-sm-4 {
+        --column-size: 4;
+    }
+
+    .col-sm-5 {
+        --column-size: 5;
+    }
+
+    .col-sm-6 {
+        --column-size: 6;
+    }
+
+
+    .col-sm-7 {
+        --column-size: 7;
+    }
+
+    .col-sm-8 {
+        --column-size: 8;
+    }
+
+    .col-sm-9 {
+        --column-size: 9;
+    }
+
+    .col-sm-10 {
+        --column-size: 10;
+    }
+
+    .col-sm-11 {
+        --column-size: 11;
+    }
+
+    .col-sm-12 {
+        --column-size: 12;
+    }
+}
+
+/* md */
+@media screen and (min-width: 768px) {
+
+    .col-md-full {
+        flex-grow: 1;
+        max-width: none;
+    }
+
+    .col-md-1 {
+        --column-size: 1;
+    }
+
+    .col-md-2 {
+        --column-size: 2;
+    }
+
+    .col-md-3 {
+        --column-size: 3;
+    }
+
+    .col-md-4 {
+        --column-size: 4;
+    }
+
+    .col-md-5 {
+        --column-size: 5;
+    }
+
+    .col-md-6 {
+        --column-size: 6;
+    }
+
+
+    .col-md-7 {
+        --column-size: 7;
+    }
+
+    .col-md-8 {
+        --column-size: 8;
+    }
+
+    .col-md-9 {
+        --column-size: 9;
+    }
+
+    .col-md-10 {
+        --column-size: 10;
+    }
+
+    .col-md-11 {
+        --column-size: 11;
+    }
+
+    .col-md-12 {
+        --column-size: 12;
+    }
+}
+
+/* lg */
+@media screen and (min-width:992px) {
+
+    .col-lg-1 {
+        --column-size: 1;
+    }
+
+    .col-lg-2 {
+        --column-size: 2;
+    }
+
+    .col-lg-3 {
+        --column-size: 3;
+    }
+
+    .col-lg-4 {
+        --column-size: 4;
+    }
+
+    .col-lg-5 {
+        --column-size: 5;
+    }
+
+    .col-lg-6 {
+        --column-size: 6;
+    }
+
+
+    .col-lg-7 {
+        --column-size: 7;
+    }
+
+    .col-lg-8 {
+        --column-size: 8;
+    }
+
+    .col-lg-9 {
+        --column-size: 9;
+    }
+
+    .col-lg-10 {
+        --column-size: 10;
+    }
+
+    .col-lg-11 {
+        --column-size: 11;
+    }
+
+    .col-lg-12 {
+        --column-size: 12;
+    }
+}
+
+/* xl */
+@media screen and (min-width: 1200px) {
+
+    .col-xl-1 {
+        --column-size: 1;
+    }
+
+    .col-xl-2 {
+        --column-size: 2;
+    }
+
+    .col-xl-3 {
+        --column-size: 3;
+    }
+
+    .col-xl-4 {
+        --column-size: 4;
+    }
+
+    .col-xl-5 {
+        --column-size: 5;
+    }
+
+    .col-xl-6 {
+        --column-size: 6;
+    }
+
+
+    .col-xl-7 {
+        --column-size: 7;
+    }
+
+    .col-xl-8 {
+        --column-size: 8;
+    }
+
+    .col-xl-9 {
+        --column-size: 9;
+    }
+
+    .col-xl-10 {
+        --column-size: 10;
+    }
+
+    .col-xl-11 {
+        --column-size: 11;
+    }
+
+    .col-xl-12 {
+        --column-size: 12;
+    }
+}
+
+/* XXL */
+@media screen and (min-width: 1400px) {
+
+    .col-xxl-1 {
+        --column-size: 1;
+    }
+
+    .col-xxl-2 {
+        --column-size: 2;
+    }
+
+    .col-xxl-3 {
+        --column-size: 3;
+    }
+
+    .col-xxl-4 {
+        --column-size: 4;
+    }
+
+    .col-xxl-5 {
+        --column-size: 5;
+    }
+
+    .col-xxl-6 {
+        --column-size: 6;
+    }
+
+
+    .col-xxl-7 {
+        --column-size: 7;
+    }
+
+    .col-xxl-8 {
+        --column-size: 8;
+    }
+
+    .col-xxl-9 {
+        --column-size: 9;
+    }
+
+    .col-xxl-10 {
+        --column-size: 10;
+    }
+
+    .col-xxl-11 {
+        --column-size: 11;
+    }
+
+    .col-xxl-12 {
+        --column-size: 12;
+    }
+}
