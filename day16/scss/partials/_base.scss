@@ -1,5 +1,9 @@
 // Định nghĩa các cái class hay sử dụng
 
+*{
+    box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
     font-family: "Inter", sans-serif;
@@ -7,6 +11,10 @@ html {
 
 body {
     font-size: 1.4rem;
+}
+
+img {
+    display: block;
 }
 
 .container {
@@ -22,4 +30,12 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.col-22 {
+    width: 22%;
+}
+
+.justify-center {
+    justify-content: center;
 }

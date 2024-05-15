@@ -1,2 +1,9 @@
 // Định nghĩa các cái mixin
 //Place Holder thật ra ít dùng
+
+@mixin line-clamp($num) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: $num;
+}

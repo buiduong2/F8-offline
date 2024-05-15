@@ -139,4 +139,9 @@ textarea,
 button {
     outline: none;
     border: none;
+    font-family: inherit;
+}
+
+textarea {
+    resize: none;
 }

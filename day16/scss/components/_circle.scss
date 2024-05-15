@@ -1,0 +1,16 @@
+.circle {
+    border-radius: 50%;
+    width: 235px;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    z-index: -1;
+}
+
+.circle--green {
+    background-color: var(--Green-200, #dcffca);
+}
+
+.circle--orange {
+    background-color: var(--Orange-200, #ffd5bd);
+}
