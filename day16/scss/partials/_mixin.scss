@@ -9,8 +9,7 @@
 }
 
 @mixin fixed-width($width) {
-    width: $width;
-    max-width: 100%;
+    width: min($width,100%);
 }
 
 $grid-breakpoints: (

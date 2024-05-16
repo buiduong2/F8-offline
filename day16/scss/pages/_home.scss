@@ -37,7 +37,6 @@
             .main-heading {
                 font-size: 43.333px;
                 font-weight: 800;
-                // width: 65%;
                 @include mixin.fixed-width(400px);
                 margin-bottom: 27.67px;
             }
@@ -46,7 +45,6 @@
                 font-size: 1.6rem;
                 font-weight: 400;
                 line-height: 127.604%;
-                // width: 75%;
                 @include mixin.fixed-width(450px);
             }
         }
@@ -79,10 +77,97 @@
             transform-origin: top left;
             color: var(--Green-1000, #216000);
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            font-size: 23vh;
+            font-size: min(23vh, calc(27vw / 2));
             font-weight: 800;
             overflow: hidden;
             padding-left: 10px;
+        }
+    }
+    @include mixin.media-from-x-to-y("sm", "lg") {
+        position: relative;
+
+        .hero-content-inner .hero-detail {
+            width: 70%;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-banner {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            z-index: 1;
+
+            .banner-img-wrapper {
+                translate: 0;
+                width: 50%;
+                height: auto;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                translate: 0 -50%;
+            }
+
+            .banner-heading {
+                transform: rotate(0);
+                left: 0;
+                top: 10%;
+            }
+        }
+    }
+
+    @include mixin.media("xs") {
+        position: relative;
+        height: auto;
+        flex-wrap: wrap;
+        .hero-content-inner {
+            height: auto;
+            min-height: calc(100vh - 108px - 50vh);
+            position: static;
+            text-align: center;
+            .hero-detail {
+                margin-top: 20px;
+                text-align: center;
+                width: 100%;
+                justify-content: center;
+
+                .sub-heading {
+                    width: 100%;
+                }
+
+                .hero-desc {
+                    display: none;
+                }
+            }
+        }
+
+        .hero-banner {
+            height: 50vh;
+            order: -1;
+            width: 100%;
+
+            .banner-img-wrapper {
+                translate: 0;
+                width: 100%;
+                height: 100%;
+                top: 50%;
+                right: 0;
+                translate: 0;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+
+            .banner-heading {
+                transform: rotate(0);
+                position: absolute;
+                top: auto;
+                left: 0;
+                bottom: 0;
+                text-align: center;
+                width: 100%;
+            }
         }
     }
 }
