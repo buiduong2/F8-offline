@@ -69,46 +69,6 @@
   --row-space: calc(var(--spacer) * 3);
 }
 
-/* ========= CUSTOM BEGIN ===============*/
-.col-31 {
-  --column-size: 3.7;
-}
-
-.col-38 {
-  --column-size: 3.8;
-}
-
-.col-44 {
-  --column-size: 4.4;
-}
-
-/* UTILITY FLEX*/
-.justify-center {
-  justify-content: center;
-}
-
-.align-center {
-  align-items: center;
-}
-
-/* Custom Gutter*/
-.row.gx-ct-84 {
-  --column-space: 84px;
-}
-
-.row.gx-ct-52 {
-  --column-space: 52px;
-}
-
-.row.gy-ct-96 {
-  --row-space: 96px;
-}
-
-.row.gy-ct-40 {
-  --row-space: 40px;
-}
-
-/* ========= CUSTOM END ===============*/
 /*Container*/
 /* COL */
 .col-1 {
@@ -395,7 +355,7 @@
 }
 /*Container*/
 .container-sm,
-.contaner {
+.container {
   margin-inline: auto;
 }
 
@@ -472,5 +432,46 @@
     max-width: 975px;
   }
 }
+/* ========= CUSTOM BEGIN ===============*/
+@media screen and (min-width: 992px) {
+  .col-31 {
+    --column-size: 3.7;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .col-38 {
+    --column-size: 3.8;
+  }
+  .col-44 {
+    --column-size: 4.4;
+  }
+}
+/* UTILITY FLEX*/
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+/* Custom Gutter*/
+.row.gx-ct-84 {
+  --column-space: 84px;
+}
+
+.row.gx-ct-52 {
+  --column-space: 52px;
+}
+
+.row.gy-ct-96 {
+  --row-space: 96px;
+}
+
+.row.gy-ct-40 {
+  --row-space: 40px;
+}
+
+/* ========= CUSTOM END ===============*/
 
 /*# sourceMappingURL=grid.css.map */

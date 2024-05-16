@@ -1,6 +1,6 @@
 // Định nghĩa các cái mixin
 //Place Holder thật ra ít dùng
-
+@use "sass:map";
 @mixin line-clamp($num) {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -13,6 +13,42 @@
     max-width: 100%;
 }
 
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+@mixin media($name) {
+    @if ($name == "xs") {
+        @media screen and (max-width: 576px) {
+            @content;
+        }
+    } @else {
+        $value: map.get($grid-breakpoints, $name);
+        @media screen and (min-width: $value) {
+            @content;
+        }
+    }
+}
+
+@mixin media-from-x-to-y($name-x,$name-y) {
+
+    $value-y: map.get($grid-breakpoints, $name-y);
+    $value-x: map.get($grid-breakpoints, $name-x);
+    @if($name-x == '') {
+        @media screen and (max-width: $value-y) {
+
+        }
+    } @else {
+        @media screen and (min-width: $value-x) and (max-width: $value-y) {
+            @content;
+        }
+    }
+}
 
 @mixin media-screen($is-max, $value) {
     @if ($is-max) {

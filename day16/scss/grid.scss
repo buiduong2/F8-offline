@@ -41,18 +41,93 @@ $spacer-mutilples: (
     }
 }
 
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+$container-max-widths: (
+    xs: 100%,
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1200px
+);
+
+$container-sm-max-widths: (
+    xs: (
+        0.8125 * 100%
+    ),
+    sm: (
+        0.8125 * 540px
+    ),
+    md: (
+        0.8125 * 720px
+    ),
+    lg: (
+        0.8125 * 780px
+    ),
+    xl: (
+        0.8125 * 1140px
+    ),
+    xxl: (
+        0.8125 * 1200px
+    )
+);
+
+/*Container*/
+
+/* COL */
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        --column-size: #{$i};
+    }
+}
+
+@each $break-point, $max-width in $grid-breakpoints {
+    /* col-#{$break-point} */
+    @include mixin.make-col($break-point, $max-width);
+}
+
+/*Container*/
+.container-sm,
+.container {
+    margin-inline: auto;
+}
+@each $break-point, $max-width in $grid-breakpoints {
+    $container-max-width: map.get($container-max-widths, $break-point);
+    /*  #{$break-point} */
+    @include mixin.make-container($break-point, $max-width, $container-max-width);
+}
+
+/*Container Inner*/
+@each $break-point, $max-width in $grid-breakpoints {
+    $container-max-width: map.get($container-sm-max-widths, $break-point);
+    /*  #{$break-point} */
+    @include mixin.make-container-sm($break-point, $max-width, $container-max-width);
+}
+
 /* ========= CUSTOM BEGIN ===============*/
 
-.col-31 {
-    --column-size: 3.7;
+@include mixin.media("lg") {
+    .col-31 {
+        --column-size: 3.7;
+    }
 }
 
-.col-38 {
-    --column-size: 3.8;
-}
+@include mixin.media("xl") {
+    .col-38 {
+        --column-size: 3.8;
+    }
 
-.col-44 {
-    --column-size: 4.4;
+    .col-44 {
+        --column-size: 4.4;
+    }
 }
 
 /* UTILITY FLEX*/
@@ -83,64 +158,3 @@ $spacer-mutilples: (
 }
 
 /* ========= CUSTOM END ===============*/
-
-$grid-breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
-    xxl: 1400px
-);
-
-
-$container-max-widths: (
-    xs: 100%,
-    sm: 540px,
-    md: 720px,
-    lg: 960px,
-    xl: 1140px,
-    xxl: 1200px
-);
-
-$container-sm-max-widths: (
-    xs: (0.8125 * 100%),
-    sm: (0.8125 * 540px),
-    md: (0.8125 * 720px),
-    lg: (0.8125 * 780px),
-    xl: (0.8125 * 1140px),
-    xxl: (0.8125 * 1200px)
-);
-
-
-/*Container*/
-
-/* COL */
-@for $i from 1 through 12 {
-    .col-#{$i} {
-        --column-size: #{$i};
-    }
-}
-
-@each $break-point, $max-width in $grid-breakpoints {
-    /* col-#{$break-point} */
-    @include mixin.make-col($break-point, $max-width);
-}
-
-/*Container*/
-.container-sm,
-.contaner {
-    margin-inline: auto;
-}
-@each $break-point, $max-width in $grid-breakpoints {
-    $container-max-width: map.get($container-max-widths, $break-point);
-    /*  #{$break-point} */
-    @include mixin.make-container($break-point, $max-width, $container-max-width);
-}
-
-/*Container Inner*/
-@each $break-point, $max-width in $grid-breakpoints {
-    $container-max-width: map.get($container-sm-max-widths, $break-point);
-    /*  #{$break-point} */
-    @include mixin.make-container-sm($break-point, $max-width, $container-max-width);
-}
