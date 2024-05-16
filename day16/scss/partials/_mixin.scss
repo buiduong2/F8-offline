@@ -12,3 +12,47 @@
     width: $width;
     max-width: 100%;
 }
+
+
+@mixin media-screen($is-max, $value) {
+    @if ($is-max) {
+        @media screen and (max-width: 576px) {
+            @content;
+        }
+    } @else {
+        @media screen and (min-width: $value) {
+            @content;
+        }
+    }
+}
+
+@mixin make-col($break-point, $max-width) {
+    $isMax: $max-width == 0;
+
+    @include media-screen($isMax, $max-width) {
+        @for $i from 1 through 12 {
+            .col-#{$break-point}-#{$i} {
+                --column-size: #{$i};
+            }
+        }
+    }
+}
+
+@mixin make-container($break-point, $max-width, $container-max-width) {
+    $isMax: $max-width == 0;
+
+    @include media-screen($isMax, $max-width) {
+        .container {
+            max-width: $container-max-width;
+        }
+    }
+}
+@mixin make-container-sm($break-point, $max-width, $container-max-width) {
+    $isMax: $max-width == 0;
+
+    @include media-screen($isMax, $max-width) {
+        .container-sm {
+            max-width: $container-max-width;
+        }
+    }
+}
