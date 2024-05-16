@@ -359,6 +359,11 @@
   margin-inline: auto;
 }
 
+@media screen and (max-width: 576px) {
+  .container {
+    padding-inline: 10px;
+  }
+}
 /*  xs */
 @media screen and (max-width: 576px) {
   .container {
@@ -455,6 +460,14 @@
   align-items: center;
 }
 
+@media screen and (max-width: 576px) {
+  .xs-algin-center {
+    align-items: center;
+  }
+  .xs-justify-center {
+    justify-content: center;
+  }
+}
 /* Custom Gutter*/
 .row.gx-ct-84 {
   --column-space: 84px;

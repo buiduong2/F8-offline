@@ -4,18 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Green Chop | Quán ăn nhà hàng</title>
 
     <!-- Font embeded -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./imgs/banner.png" type="image/x-icon">
 </head>
 
 <body>
     <div id="app">
+        <input type="checkbox" hidden id="input-open-nav">
+        <div class="overlay"> <label for="input-open-nav"></label> </div>
         <header class="header-section">
             <div class="container header-inner">
+                <div class="header-bar">
+                    <button class="bar-btn">
+                        <label for="input-open-nav"><i class="fa-solid fa-bars"></i></label>
+                    </button>
+                </div>
                 <div class="header-logo">
                     <img src="./imgs/header-logo.png" alt="">
                 </div>
@@ -29,6 +40,15 @@
                             <li class="nav-item"><a class="nav-link" href="#news">Tin tức</a></li>
                             <li class="nav-item"><a class="nav-link" href="#contact">Liên hệ</a></li>
                         </ul>
+
+
+                        <div class="nav-btn-wrapper">
+                            <button class="nav-btn">
+                                <label for="input-open-nav">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </label>
+                            </button>
+                        </div>
                     </nav>
 
                     <div class="actions">
@@ -531,8 +551,8 @@
         </section>
         <footer class="section-footer">
             <div class="container-sm">
-                <div class="row gx-4">
-                    <div class="col-3">
+                <div class="row gx-4 xs-justify-center">
+                    <div class="col-xl-3 col-sm-6 col-xs-12">
                         <article class="footer-item  footer-about">
                             <div class="img-wrapper">
                                 <img src="/imgs/header-logo.png" alt="">
@@ -542,7 +562,7 @@
                                 của người tiêu dùng</p>
                         </article>
                     </div>
-                    <div class="col-3">
+                    <div class="col-xl-3 col-sm-6 col-xs-12">
                         <article class="footer-item  footer-nav">
                             <h4 class="footer-item-title"><a class="nav-link" href="#">Trang chủ</a></h4>
                             <nav class="">
@@ -554,7 +574,7 @@
                             </nav>
                         </article>
                     </div>
-                    <div class="col-3">
+                    <div class="col-xl-3 col-sm-6 col-xs-12">
                         <article class="footer-item footer-support">
                             <h4 class="footer-item-title">Hỗ trợ</h4>
                             <p class="footer-item-desc">Đặt hàng trực tuyến (8h-22h)</p>
@@ -566,7 +586,7 @@
                             </ul>
                         </article>
                     </div>
-                    <div class="col-3">
+                    <div class="col-xl-3 col-sm-6 col-xs-12">
                         <article class="footer-item">
                             <h4 class="footer-item-title">Liên hệ</h4>
                             <ul>
@@ -585,13 +605,13 @@
 
                 <hr class="footer-hr">
 
-                <div class="row">
-                    <div class="col-6">
+                <div class="row xs-justify-center">
+                    <div class="col-sm-6 col-xs-12">
                         <div class="certified-img">
                             <img src="./imgs/certified.png" alt="">
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-sm-6 col-xs-12">
                         <ul class="social-list">
                             <li class="social-item">
                                 <a class="social-link" href="#">

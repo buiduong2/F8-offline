@@ -61,7 +61,7 @@
         height: 100%;
         .banner-img-wrapper {
             height: 100%;
-            translate: -25%;
+            translate: -30%;
             img {
                 display: block;
                 height: 100%;
@@ -79,7 +79,7 @@
             transform-origin: top left;
             color: var(--Green-1000, #216000);
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            font-size: 166px;
+            font-size: 23vh;
             font-weight: 800;
             overflow: hidden;
             padding-left: 10px;
@@ -199,9 +199,6 @@
 
 .section-product {
     .product-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 96px 83px;
         margin-bottom: 28px;
 
         .product-item {

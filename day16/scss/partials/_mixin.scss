@@ -35,13 +35,12 @@ $grid-breakpoints: (
     }
 }
 
-@mixin media-from-x-to-y($name-x,$name-y) {
-
+@mixin media-from-x-to-y($name-x, $name-y) {
     $value-y: map.get($grid-breakpoints, $name-y);
     $value-x: map.get($grid-breakpoints, $name-x);
-    @if($name-x == '') {
+    @if ($name-x == "") {
         @media screen and (max-width: $value-y) {
-
+            @content;
         }
     } @else {
         @media screen and (min-width: $value-x) and (max-width: $value-y) {

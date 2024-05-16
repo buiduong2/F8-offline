@@ -99,6 +99,13 @@ $container-sm-max-widths: (
 .container {
     margin-inline: auto;
 }
+
+@include mixin.media("xs") {
+    .container {
+        padding-inline: 10px;
+    }
+}
+
 @each $break-point, $max-width in $grid-breakpoints {
     $container-max-width: map.get($container-max-widths, $break-point);
     /*  #{$break-point} */
@@ -138,6 +145,16 @@ $container-sm-max-widths: (
 
 .align-center {
     align-items: center;
+}
+
+@include mixin.media("xs") {
+    .xs-algin-center {
+        align-items: center;
+    }
+
+    .xs-justify-center {
+        justify-content: center;
+    }
 }
 
 /* Custom Gutter*/
