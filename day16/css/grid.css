@@ -69,7 +69,7 @@
     --row-space: calc(var(--spacer) * 3);
 }
 
-[class ^="col-"] {
+.row [class ^="col"] {
     flex-basis: calc(100% / var(--max-column) * var(--column-size));
     max-width: calc(100% / var(--max-column) * var(--column-size));
     padding-inline: calc(var(--column-space) /2);

@@ -1,6 +1,6 @@
 // Định nghĩa các cái class hay sử dụng
 
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -21,6 +21,12 @@ img {
     max-width: 1200px;
     margin-inline: auto;
 }
+
+.container-sm {
+    max-width: 975px;
+    margin-inline: auto;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -32,10 +38,38 @@ img {
     object-fit: cover;
 }
 
-.col-22 {
-    width: 22%;
+.col-31 {
+    --column-size: 3.7;
 }
 
 .justify-center {
     justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.col-38 {
+    --column-size: 3.8;
+}
+
+.col-44 {
+    --column-size: 4.4;
+}
+
+.row.gx-ct-84 {
+    --column-space: 84px;
+}
+
+.row.gx-ct-52 {
+    --column-space: 52px;
+}
+
+.row.gy-ct-96 {
+    --row-space: 96px;
+}
+
+.row.gy-ct-40 {
+    --row-space: 40px;
 }

@@ -1,0 +1,110 @@
+@use "../partials/mixin";
+
+%card-item {
+    color: var(--Content, #2c2c2c);
+    background: var(--White, #fff);
+    overflow: hidden;
+    height: 100%;
+}
+
+%card-img-wrapper {
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+%card-content {
+    padding: 24.17px 27px 6px;
+}
+
+%card-metas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%card-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 133.333%;
+    @include mixin.line-clamp(2);
+}
+
+%card-desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 127.604%;
+    @include mixin.line-clamp(4);
+}
+
+.news-list {
+
+    .news-item {
+        @extend %card-item;
+
+        .news-img-wrapper {
+            @extend %card-img-wrapper;
+            margin-bottom: 16.27px;
+            border-radius: 6.667px;
+            box-shadow: 0px 3.333px 3.333px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        .news-metas {
+            @extend %card-metas;
+            margin-bottom: 16.27px;
+            font-size: 15px;
+            font-weight: 500;
+            .meta-category {
+                color: var(--green-800-main, #46b20f);
+            }
+
+            .meta-published-date {
+                color: var(--grey-500-main, #a3a3a3);
+
+                .published-date-icon {
+                    display: inline;
+                    vertical-align: sub;
+                }
+            }
+        }
+
+        .news-title {
+            @extend %card-title;
+            margin-bottom: 16.27px;
+        }
+
+        .news-desc {
+            @extend %card-desc;
+        }
+    }
+}
+
+.self-news-list {
+    .self-news-item {
+        border-radius: 8.333px;
+        @extend %card-item;
+
+        .self-news-img-wrapper {
+            border-radius: 8.333px;
+            @extend %card-img-wrapper;
+        }
+        .self-news-content {
+            @extend %card-content;
+
+            .self-news-title {
+                color: var(--Orange-700, #e05000);
+                text-shadow: 0px 3.333px 3.333px rgba(0, 0, 0, 0.25);
+                margin-bottom: 7px;
+                @extend %card-title;
+            }
+
+            .self-news-desc {
+                color: var(--Content, #19191b);
+                @extend %card-desc;
+            }
+        }
+    }
+}
