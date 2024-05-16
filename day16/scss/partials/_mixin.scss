@@ -7,3 +7,8 @@
     overflow: hidden;
     -webkit-line-clamp: $num;
 }
+
+@mixin fixed-width($width) {
+    width: $width;
+    max-width: 100%;
+}

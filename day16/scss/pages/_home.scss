@@ -1,5 +1,4 @@
 @use "../layouts/header";
-
 @use "../partials/base";
 @use "../partials/mixin";
 @use "../partials/variables" as var;
@@ -25,30 +24,30 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            color: #2c2c2c;
+            color: var(--Content, #2c2c2c);
 
             .sub-heading {
                 font-size: 3.6666rem;
-                font-style: normal;
                 font-weight: 800;
                 line-height: 131.523%; /* 48.225px */
                 width: 90%;
+                margin-bottom: 11.7px;
             }
 
             .main-heading {
-                font-family: Inter;
                 font-size: 43.333px;
-                font-style: normal;
                 font-weight: 800;
-                line-height: normal;
-                width: 65%;
+                // width: 65%;
+                @include mixin.fixed-width(400px);
+                margin-bottom: 27.67px;
             }
 
             .hero-desc {
                 font-size: 1.6rem;
                 font-weight: 400;
                 line-height: 127.604%;
-                width: 75%;
+                // width: 75%;
+                @include mixin.fixed-width(450px);
             }
         }
     }
@@ -56,7 +55,7 @@
     .hero-banner {
         margin-left: auto;
         width: 48%;
-        background-color: #dcffca;
+        background: var(--Green-200, #dcffca);
         border-radius: 17px 0 0 17px;
         position: relative;
         height: 100%;
@@ -111,19 +110,19 @@
     }
 }
 
-.achievement-section {
+.about-section {
     .section-title {
-        max-width: 560px;
+        @include mixin.fixed-width(560px);
     }
 
     .section-desc {
-        max-width: 643px;
+        @include mixin.fixed-width(643px);
     }
 
-    .achievement-list {
+    .about-list {
         padding: 90px 0 114px;
 
-        .achievement-item {
+        .about-item {
             box-sizing: border-box;
             box-shadow: -5.833px 8.333px 72.5px 0px rgba(54, 54, 54, 0.12);
             background: var(--White, #fff);
@@ -161,7 +160,7 @@
             }
         }
 
-        [class^="col"]:nth-child(2) .achievement-item {
+        [class^="col"]:nth-child(2) .about-item {
             padding: 60.83px 33px;
             // flex-basis: 30%;
             .item-icon-wrapper {
@@ -170,7 +169,7 @@
         }
     }
 
-    .achievement-list {
+    .about-list {
         position: relative;
 
         .circle--orange {
@@ -250,9 +249,7 @@
 
                 .price-number {
                     color: var(--Content, #2c2c2c);
-                    font-family: Inter;
                     font-size: 23.333px;
-                    font-style: normal;
                     font-weight: 600;
                     line-height: 1.1428;
                 }
@@ -264,7 +261,7 @@
                 .circle {
                     top: 0;
                     width: 100%;
-                    @extend .circle--green;
+                    background: var(--Green-300, #c5ffa8);
                 }
             }
         }
@@ -275,7 +272,7 @@
                 .circle {
                     top: 0;
                     width: 100%;
-                    @extend .circle--orange;
+                    background: var(--Orange-300, #ffba94);
                 }
             }
         }
@@ -284,7 +281,8 @@
 
 .section-news {
     .section-desc {
-        width: 55%;
+        // width: 55%;
+        @include mixin.fixed-width(660px);
         margin-bottom: 28.83px;
     }
 
@@ -299,7 +297,7 @@
 
 .section-self-news {
     .section-title {
-        max-width: 400px;
+        @include mixin.fixed-width(400px);
     }
 
     .section-desc {
@@ -316,7 +314,7 @@
 }
 
 .section-service {
-    padding-block: 133px;
+    padding-top: 133px;
 
     .service-list {
         .service-item {
@@ -351,6 +349,7 @@
 }
 
 .section-contact {
+    padding-top: 133px;
     padding-bottom: 100px;
 
     .contact-form {
@@ -359,7 +358,7 @@
             color: var(--Content, #2c2c2c);
             font-size: 20px;
             font-weight: 600;
-            line-height: 133.333%; /* */
+            line-height: 133.333%; 
             margin-bottom: 26px;
         }
 

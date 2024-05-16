@@ -161,6 +161,7 @@ textarea {
 html {
   font-size: 62.5%;
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -233,7 +234,9 @@ img {
   overflow: hidden;
 }
 .self-news-list .self-news-item .self-news-img-wrapper img, .news-list .news-item .news-img-wrapper img {
+  height: 100%;
   width: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -268,6 +271,7 @@ img {
 }
 
 .news-list .news-item .news-img-wrapper {
+  height: 273px;
   margin-bottom: 16.27px;
   border-radius: 6.667px;
   box-shadow: 0px 3.333px 3.333px 0px rgba(0, 0, 0, 0.25);
@@ -295,6 +299,7 @@ img {
 }
 .self-news-list .self-news-item .self-news-img-wrapper {
   border-radius: 8.333px;
+  height: 195px;
 }
 .self-news-list .self-news-item .self-news-content .self-news-title {
   color: var(--Orange-700, #e05000);
@@ -358,12 +363,11 @@ img {
   z-index: -1;
 }
 
-.circle--green, .section-product .product-list [class^=col]:nth-child(3n+2) .product-item .product-img-wrapper .circle {
+.circle--green {
   background-color: var(--Green-200, #dcffca);
 }
 
-.circle--orange, .section-product .product-list [class^=col]:nth-child(3n+1) .product-item .product-img-wrapper .circle,
-.section-product .product-list [class^=col]:nth-child(3n+3) .product-item .product-img-wrapper .circle {
+.circle--orange {
   background-color: var(--Orange-200, #ffd5bd);
 }
 
@@ -547,33 +551,33 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #2c2c2c;
+  color: var(--Content, #2c2c2c);
 }
 .hero-section .hero-content-inner .hero-detail .sub-heading {
   font-size: 3.6666rem;
-  font-style: normal;
   font-weight: 800;
   line-height: 131.523%; /* 48.225px */
   width: 90%;
+  margin-bottom: 11.7px;
 }
 .hero-section .hero-content-inner .hero-detail .main-heading {
-  font-family: Inter;
   font-size: 43.333px;
-  font-style: normal;
   font-weight: 800;
-  line-height: normal;
-  width: 65%;
+  width: 400px;
+  max-width: 100%;
+  margin-bottom: 27.67px;
 }
 .hero-section .hero-content-inner .hero-detail .hero-desc {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 127.604%;
-  width: 75%;
+  width: 450px;
+  max-width: 100%;
 }
 .hero-section .hero-banner {
   margin-left: auto;
   width: 48%;
-  background-color: #dcffca;
+  background: var(--Green-200, #dcffca);
   border-radius: 17px 0 0 17px;
   position: relative;
   height: 100%;
@@ -624,16 +628,18 @@ img {
   margin-inline: auto;
 }
 
-.achievement-section .section-title {
-  max-width: 560px;
+.about-section .section-title {
+  width: 560px;
+  max-width: 100%;
 }
-.achievement-section .section-desc {
-  max-width: 643px;
+.about-section .section-desc {
+  width: 643px;
+  max-width: 100%;
 }
-.achievement-section .achievement-list {
+.about-section .about-list {
   padding: 90px 0 114px;
 }
-.achievement-section .achievement-list .achievement-item {
+.about-section .about-list .about-item {
   box-sizing: border-box;
   box-shadow: -5.833px 8.333px 72.5px 0px rgba(54, 54, 54, 0.12);
   background: var(--White, #fff);
@@ -641,7 +647,7 @@ img {
   border-radius: 3.333px;
   padding: 33px;
 }
-.achievement-section .achievement-list .achievement-item .item-icon-wrapper {
+.about-section .about-list .about-item .item-icon-wrapper {
   width: 83px;
   height: 83px;
   border-radius: 10px;
@@ -649,39 +655,37 @@ img {
   padding: 19px;
   margin-bottom: 23px;
 }
-.achievement-section .achievement-list .achievement-item .item-icon-wrapper img {
+.about-section .about-list .about-item .item-icon-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-.achievement-section .achievement-list .achievement-item .item-title {
+.about-section .about-list .about-item .item-title {
   color: var(--Content, #2c2c2c);
   font-size: 43.333px;
   font-weight: 800;
   margin-bottom: 23px;
 }
-.achievement-section .achievement-list .achievement-item .item-desc {
+.about-section .about-list .about-item .item-desc {
   color: var(--Content, #2c2c2c);
   font-size: 20px;
   font-weight: 400;
   line-height: 154.167%;
 }
-.achievement-section .achievement-list [class^=col]:nth-child(2) .achievement-item {
+.about-section .about-list [class^=col]:nth-child(2) .about-item {
   padding: 60.83px 33px;
 }
-.achievement-section .achievement-list [class^=col]:nth-child(2) .achievement-item .item-icon-wrapper {
+.about-section .about-list [class^=col]:nth-child(2) .about-item .item-icon-wrapper {
   background: var(--Green-100, #f2ffec);
 }
-.achievement-section .achievement-list {
+.about-section .about-list {
   position: relative;
 }
-.achievement-section .achievement-list .circle--orange, .achievement-section .achievement-list .section-product .product-list [class^=col]:nth-child(3n+1) .product-item .product-img-wrapper .circle, .section-product .product-list [class^=col]:nth-child(3n+1) .product-item .product-img-wrapper .achievement-section .achievement-list .circle,
-.achievement-section .achievement-list .section-product .product-list [class^=col]:nth-child(3n+3) .product-item .product-img-wrapper .circle,
-.section-product .product-list [class^=col]:nth-child(3n+3) .product-item .product-img-wrapper .achievement-section .achievement-list .circle {
+.about-section .about-list .circle--orange {
   bottom: 0;
   right: 0;
 }
-.achievement-section .achievement-list .circle--green, .achievement-section .achievement-list .section-product .product-list [class^=col]:nth-child(3n+2) .product-item .product-img-wrapper .circle, .section-product .product-list [class^=col]:nth-child(3n+2) .product-item .product-img-wrapper .achievement-section .achievement-list .circle {
+.about-section .about-list .circle--green {
   top: 0;
   left: 0;
 }
@@ -742,24 +746,25 @@ img {
 }
 .section-product .product-list .product-item .product-price .price-number {
   color: var(--Content, #2c2c2c);
-  font-family: Inter;
   font-size: 23.333px;
-  font-style: normal;
   font-weight: 600;
   line-height: 1.1428;
 }
 .section-product .product-list [class^=col]:nth-child(3n+2) .product-item .product-img-wrapper .circle {
   top: 0;
   width: 100%;
+  background: var(--Green-300, #c5ffa8);
 }
 .section-product .product-list [class^=col]:nth-child(3n+1) .product-item .product-img-wrapper .circle,
 .section-product .product-list [class^=col]:nth-child(3n+3) .product-item .product-img-wrapper .circle {
   top: 0;
   width: 100%;
+  background: var(--Orange-300, #ffba94);
 }
 
 .section-news .section-desc {
-  width: 55%;
+  width: 660px;
+  max-width: 100%;
   margin-bottom: 28.83px;
 }
 .section-news .news-list {
@@ -770,7 +775,8 @@ img {
 }
 
 .section-self-news .section-title {
-  max-width: 400px;
+  width: 400px;
+  max-width: 100%;
 }
 .section-self-news .section-desc {
   margin-bottom: 165px;
@@ -784,7 +790,7 @@ img {
 }
 
 .section-service {
-  padding-block: 133px;
+  padding-top: 133px;
 }
 .section-service .service-list .service-item {
   display: flex;
@@ -812,6 +818,7 @@ img {
 }
 
 .section-contact {
+  padding-top: 133px;
   padding-bottom: 100px;
 }
 .section-contact .contact-form {
@@ -821,7 +828,7 @@ img {
   color: var(--Content, #2c2c2c);
   font-size: 20px;
   font-weight: 600;
-  line-height: 133.333%; /* */
+  line-height: 133.333%;
   margin-bottom: 26px;
 }
 .section-contact .contact-form .form-group {
