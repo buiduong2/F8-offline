@@ -61,7 +61,7 @@ $container-max-widths: (
 
 $container-sm-max-widths: (
     xs: (
-        0.8125 * 100%
+        100%
     ),
     sm: (
         0.8125 * 540px
@@ -172,6 +172,17 @@ $container-sm-max-widths: (
 
 .row.gy-ct-40 {
     --row-space: 40px;
+}
+
+@include mixin.media("xs") {
+    @each $nth, $muitl in $spacer-mutilples {
+        .row.xs\:gx-#{$nth} {
+            --column-space: calc(var(--spacer) * #{$muitl});
+        }
+        .row.xs\:gy-#{$nth} {
+            --row-space: calc(var(--spacer) * #{$muitl});
+        }
+    }
 }
 
 /* ========= CUSTOM END ===============*/

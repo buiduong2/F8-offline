@@ -404,7 +404,7 @@
 /*  xs */
 @media screen and (max-width: 576px) {
   .container-sm {
-    max-width: 81.25%;
+    max-width: 100%;
   }
 }
 /*  sm */
@@ -485,6 +485,44 @@
   --row-space: 40px;
 }
 
+@media screen and (max-width: 576px) {
+  .row.xs\:gx-0 {
+    --column-space: calc(var(--spacer) * 0);
+  }
+  .row.xs\:gy-0 {
+    --row-space: calc(var(--spacer) * 0);
+  }
+  .row.xs\:gx-1 {
+    --column-space: calc(var(--spacer) * 0.25);
+  }
+  .row.xs\:gy-1 {
+    --row-space: calc(var(--spacer) * 0.25);
+  }
+  .row.xs\:gx-2 {
+    --column-space: calc(var(--spacer) * 0.5);
+  }
+  .row.xs\:gy-2 {
+    --row-space: calc(var(--spacer) * 0.5);
+  }
+  .row.xs\:gx-3 {
+    --column-space: calc(var(--spacer) * 1);
+  }
+  .row.xs\:gy-3 {
+    --row-space: calc(var(--spacer) * 1);
+  }
+  .row.xs\:gx-4 {
+    --column-space: calc(var(--spacer) * 1.5);
+  }
+  .row.xs\:gy-4 {
+    --row-space: calc(var(--spacer) * 1.5);
+  }
+  .row.xs\:gx-5 {
+    --column-space: calc(var(--spacer) * 3);
+  }
+  .row.xs\:gy-5 {
+    --row-space: calc(var(--spacer) * 3);
+  }
+}
 /* ========= CUSTOM END ===============*/
 
 /*# sourceMappingURL=grid.css.map */
