@@ -102,8 +102,13 @@ $container-sm-max-widths: (
 
 @include mixin.media("xs") {
     .container {
-        padding-inline: 10px;
+        padding-inline: 20px;
     }
+
+    .container-sm {
+        padding-inline: 20px;
+    }
+
 }
 
 @each $break-point, $max-width in $grid-breakpoints {

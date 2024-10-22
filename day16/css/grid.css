@@ -361,7 +361,10 @@
 
 @media screen and (max-width: 576px) {
   .container {
-    padding-inline: 10px;
+    padding-inline: 20px;
+  }
+  .container-sm {
+    padding-inline: 20px;
   }
 }
 /*  xs */
